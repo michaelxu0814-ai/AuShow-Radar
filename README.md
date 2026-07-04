@@ -41,6 +41,6 @@ data/events.json      唯一数据库,可直接手改
 
 ## 已知限制
 
-- 小红书三个源需要 OpenCLI 所连的 Chrome profile 登录小红书,未登录时自动跳过(不影响其他源)
+- 小红书直连(opencli):登录态正常(Default profile, web_session 到2027),但小红书风控会拦自动化搜索并伪装成"未登录"错误,时通时不通;管道自动跳过。小红书内容的稳定通道是 exa-xhs-* 源(Exa索引)
 - mcporter 的 exa 配置按家目录解析,fetch.py 已固定 cwd,别改
 - Eventbrite 直抓被 CAPTCHA 拦,靠 Exa 间接覆盖

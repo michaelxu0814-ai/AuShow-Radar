@@ -9,9 +9,12 @@
     { "id": "jina-austickets", "method": "jina", "url": "https://m.austickets.com.au/tickets", "note": "AusTickets在售(粉丝见面会/中型演出)" },
     { "id": "jina-dealmoon-events", "method": "jina", "url": "https://www.dealmoon.com.au/local-events", "note": "Dealmoon演出频道,竞品兼信息源;URL如失效改用exa搜site:dealmoon.com.au 演唱会" },
     { "id": "jina-auyx-news", "method": "jina", "url": "https://www.auyx.au/news", "note": "澳洲印象资讯,主办方通稿常发这里" },
-    { "id": "xhs-syd-shows", "method": "xhs", "query": "悉尼 演出 门票", "note": "小红书悉尼演出,需登录态" },
-    { "id": "xhs-mel-shows", "method": "xhs", "query": "墨尔本 演出 门票", "note": "小红书墨尔本演出,需登录态" },
-    { "id": "xhs-comedy", "method": "xhs", "query": "澳洲 中文脱口秀", "note": "小红书华语喜剧,需登录态" },
+    { "id": "xhs-syd-shows", "method": "xhs", "query": "悉尼 演出 门票", "note": "小红书直连,风控经常拦自动化搜索,能通就是赚到" },
+    { "id": "xhs-mel-shows", "method": "xhs", "query": "墨尔本 演出 门票", "note": "小红书直连,同上" },
+    { "id": "exa-xhs-syd", "method": "exa", "query": "site:xiaohongshu.com 悉尼 演出 门票 演唱会", "note": "小红书内容主通道(Exa索引,稳定)" },
+    { "id": "exa-xhs-mel", "method": "exa", "query": "site:xiaohongshu.com 墨尔本 演出 门票 演唱会", "note": "小红书内容主通道(Exa索引,稳定)" },
+    { "id": "exa-xhs-comedy", "method": "exa", "query": "site:xiaohongshu.com 澳洲 中文脱口秀 开放麦", "note": "小红书华语喜剧(Exa索引)" },
+    { "id": "exa-organizer-acylive", "method": "exa", "query": "ACY LIVE 稀万娱乐 澳洲 演出 2026", "note": "主办方:ACY LIVE(澳洲华人演出策划,C阶段潜在客户)" },
     { "id": "exa-organizer-loadingzone", "method": "exa", "query": "候场喜剧 Loadingzone Comedy eventbrite 2026", "note": "主办方:候场喜剧(悉尼+墨尔本)" },
     { "id": "exa-organizer-rollingdonkey", "method": "exa", "query": "Rolling Donkey 中文喜剧 开放麦 悉尼", "note": "主办方:Rolling Donkey(悉尼,每周二)" }
   ]
