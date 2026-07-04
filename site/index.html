@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>澳华演出雷达 · 澳洲华语演出日历 | AuShow Radar</title>
+<meta name="description" content="悉尼、墨尔本华语演出全览:演唱会、脱口秀、开放麦、音乐会、见面会。只列官方购票渠道,拒绝黄牛。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F1E6; --ink:#1C1712; --red:#D6402B; --red-dk:#A82C1C;
+  --tan:#8C7B62; --line:#D8CDB8; --card:#FFFDF7;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background-image:radial-gradient(rgba(140,123,98,.10) 1px,transparent 1px);
+  background-size:22px 22px;
+}
+.wrap{max-width:680px;margin:0 auto;padding:0 18px 60px}
+header{padding:44px 0 10px;border-bottom:3px solid var(--ink);position:relative}
+.kicker{display:inline-block;background:var(--ink);color:var(--paper);font-size:11px;
+  letter-spacing:.35em;padding:4px 10px 4px 13px;margin-bottom:14px}
+h1{font-family:"Noto Serif SC",serif;font-weight:900;font-size:clamp(34px,9vw,52px);line-height:1.1}
+h1 .accent{color:var(--red)}
+.tagline{margin:10px 0 4px;color:var(--tan);font-size:14px}
+.tagline b{color:var(--red-dk)}
+.stamp{position:absolute;right:0;top:48px;transform:rotate(8deg);border:2px solid var(--red);
+  color:var(--red);font-family:"Noto Serif SC",serif;font-weight:900;font-size:12px;
+  padding:5px 9px;border-radius:4px;opacity:.85}
+.filters{padding:16px 0 6px;border-bottom:1px dashed var(--line)}
+.frow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.flabel{font-size:11px;letter-spacing:.2em;color:var(--tan);min-width:3.5em}
+.chip{border:1.5px solid var(--ink);background:transparent;color:var(--ink);font-size:13px;
+  padding:5px 14px;border-radius:999px;cursor:pointer;transition:all .15s}
+.chip.on{background:var(--ink);color:var(--paper)}
+.chip:hover{border-color:var(--red);color:var(--red)}
+.chip.on:hover{background:var(--red);border-color:var(--red);color:var(--paper)}
+section{margin-top:34px}
+h2{font-family:"Noto Serif SC",serif;font-weight:900;font-size:26px;display:flex;
+  align-items:baseline;gap:10px;margin-bottom:16px}
+h2 em{font-style:normal;font-size:13px;color:var(--red);letter-spacing:.15em;
+  border:1.5px solid var(--red);padding:2px 8px;border-radius:3px}
+h2::after{content:"";flex:1;border-bottom:2px solid var(--ink);margin-left:6px}
+.grid{display:grid;gap:16px}
+.card{background:var(--card);border:1.5px solid var(--ink);border-radius:10px;
+  padding:0;overflow:hidden;position:relative;
+  box-shadow:4px 4px 0 rgba(28,23,18,.16);transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 rgba(214,64,43,.25)}
+.card .body{padding:0 18px 14px}
+.art{position:relative;aspect-ratio:2.3/1;overflow:hidden;
+  background:linear-gradient(130deg,var(--red-dk) 0%,var(--red) 58%,#E58A5B 100%);
+  border-bottom:1.5px solid var(--ink)}
+.art .ph{position:absolute;right:10px;bottom:-18px;font-family:"Noto Serif SC",serif;
+  font-weight:900;font-size:92px;line-height:1;color:rgba(246,241,230,.28);
+  transform:rotate(-6deg);user-select:none}
+.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card h3 a{color:inherit;text-decoration:none}
+.card h3 a:hover{color:var(--red)}
+.stub{display:flex;justify-content:space-between;align-items:center;
+  border-bottom:2px dashed var(--line);padding:12px 0 10px;margin-bottom:12px;position:relative}
+.stub::before,.stub::after{content:"";position:absolute;bottom:-8px;width:16px;height:16px;
+  border-radius:50%;background:var(--paper);border:1.5px solid var(--ink)}
+.stub::before{left:-27px}.stub::after{right:-27px}
+.when{font-family:"Noto Serif SC",serif;font-weight:900;font-size:15px;color:var(--red-dk)}
+.badge{font-size:11px;letter-spacing:.15em;padding:3px 9px;border-radius:3px;font-weight:600}
+.s-onsale{background:var(--red);color:#fff}
+.s-announced{border:1.5px solid var(--ink);color:var(--ink)}
+.s-tbc{border:1.5px dashed var(--tan);color:var(--tan)}
+.card h3{font-family:"Noto Serif SC",serif;font-weight:900;font-size:19px;line-height:1.35}
+.en{color:var(--tan);font-size:12px;margin-top:3px;letter-spacing:.02em}
+.meta{display:flex;flex-direction:column;gap:4px;margin:10px 0 12px;font-size:13.5px;color:#4a4238}
+.foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.buy{background:var(--ink);color:var(--paper);text-decoration:none;font-size:13px;
+  font-weight:600;padding:7px 18px;border-radius:999px;transition:background .15s}
+.buy:hover{background:var(--red)}
+.src{color:var(--tan);font-size:12px;text-decoration:underline dotted}
+.unv{font-size:11px;color:var(--red-dk);margin-left:auto}
+.notice{margin-top:40px;border:2px solid var(--red);border-radius:10px;padding:16px 18px;
+  background:rgba(214,64,43,.05)}
+.notice h4{font-family:"Noto Serif SC",serif;color:var(--red-dk);font-size:15px;margin-bottom:6px}
+.notice p{font-size:13px;line-height:1.7}
+footer{margin-top:44px;border-top:3px solid var(--ink);padding-top:16px;
+  font-size:12px;color:var(--tan);line-height:2}
+footer a{color:var(--red-dk)}
+.hidden{display:none}
+@media(min-width:560px){.grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="kicker">AUSHOW RADAR</span>
+  <h1>澳华<span class="accent">演出</span>雷达</h1>
+  <p class="tagline">悉尼 · 墨尔本华语演出全览 —— 演唱会 / 脱口秀 / 音乐会 / 见面会。<b>只列官方渠道,拒绝黄牛。</b></p>
+  <span class="stamp">已收录 11 场</span>
+</header>
+
+<div class="filters">
+  <div class="frow"><span class="flabel">城市</span><button class="chip on" data-f="city" data-v="全部">全部</button><button class="chip" data-f="city" data-v="墨尔本">墨尔本</button><button class="chip" data-f="city" data-v="悉尼">悉尼</button></div>
+  <div class="frow"><span class="flabel">类型</span><button class="chip on" data-f="cat" data-v="全部">全部</button><button class="chip" data-f="cat" data-v="开放麦">开放麦</button><button class="chip" data-f="cat" data-v="演唱会">演唱会</button><button class="chip" data-f="cat" data-v="见面会">见面会</button><button class="chip" data-f="cat" data-v="音乐会">音乐会</button></div>
+</div>
+
+<section><h2><em>2026</em>七月</h2><div class="grid">
+<article class="card" data-city="墨尔本" data-cat="音乐会">
+  <div class="art"><span class="ph">音</span></div>
+  <div class="body">
+  <div class="stub"><span class="when">7月7日 周二</span><span class="badge s-tbc">待核实</span></div>
+  <h3><a href="https://www.dealmoon.com.au/2026/776377.html" target="_blank" rel="noopener">《进击的巨人》交响音乐会 墨尔本</a></h3>
+  <p class="en">Attack on Titan in Concert — Melbourne</p>
+  <div class="meta"><span class="m">📍 墨尔本 · 场馆待公布</span><span class="m">🎫 $137起</span></div>
+  <div class="foot"><a class="buy" href="https://www.dealmoon.com.au/2026/776377.html" target="_blank" rel="noopener">详情 ↗</a><span class="unv">ⓘ 信息待人工核实</span></div>
+  </div>
+</article>
+</div></section>
+<section><h2><em>2026</em>八月</h2><div class="grid">
+<article class="card" data-city="墨尔本" data-cat="演唱会">
+  <div class="art"><span class="ph">演</span><img src="https://imgcache.dealmoon.com/fsvrugccache.dealmoon.com/us2606/ugc/3e4/af1/258/790075f1a33492cfd8b9cddx1080x1440x241.jpeg_480_0_3_7ef2.jpeg" alt="袁娅维 TIA RAY「月亮撒野」世界巡演 墨尔本站" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+  <div class="body">
+  <div class="stub"><span class="when">8月20日 周四</span><span class="badge s-onsale">在售</span></div>
+  <h3><a href="https://www.ticketmaster.com.au/" target="_blank" rel="noopener">袁娅维 TIA RAY「月亮撒野」世界巡演 墨尔本站</a></h3>
+  <p class="en">TIA RAY World Tour — Melbourne</p>
+  <div class="meta"><span class="m">📍 Palais Theatre · 墨尔本</span><span class="m">🏛 Ticketmaster</span></div>
+  <div class="foot"><a class="buy" href="https://www.ticketmaster.com.au/" target="_blank" rel="noopener">购票 ↗</a><a class="src" href="https://www.dealmoon.com.au/post/3236987" target="_blank" rel="noopener">信源</a></div>
+  </div>
+</article>
+<article class="card" data-city="悉尼" data-cat="演唱会">
+  <div class="art"><span class="ph">演</span><img src="https://imgcache.dealmoon.com/fsvrugccache.dealmoon.com/us2606/ugc/3e4/af1/258/790075f1a33492cfd8b9cddx1080x1440x241.jpeg_480_0_3_7ef2.jpeg" alt="袁娅维 TIA RAY「月亮撒野」世界巡演 悉尼站" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+  <div class="body">
+  <div class="stub"><span class="when">8月22日 周六</span><span class="badge s-onsale">在售</span></div>
+  <h3><a href="https://www.ticketmaster.com.au/" target="_blank" rel="noopener">袁娅维 TIA RAY「月亮撒野」世界巡演 悉尼站</a></h3>
+  <p class="en">TIA RAY World Tour — Sydney</p>
+  <div class="meta"><span class="m">📍 Sydney Event Theatre(以购票页为准) · 悉尼</span><span class="m">🏛 Ticketmaster</span></div>
+  <div class="foot"><a class="buy" href="https://www.ticketmaster.com.au/" target="_blank" rel="noopener">购票 ↗</a><a class="src" href="https://www.dealmoon.com.au/post/3236987" target="_blank" rel="noopener">信源</a></div>
+  </div>
+</article>
+</div></section>
+<section><h2><em>2026</em>九月</h2><div class="grid">
+<article class="card" data-city="墨尔本" data-cat="演唱会">
+  <div class="art"><span class="ph">演</span><img src="https://imgcache.dealmoon.com/thumbimg.dealmoon.com/au2606/dealmoon/e1c/359/b68/b2a2acb35084c4214277956x1080x1080x200.jpeg_480_0_3_3969.jpeg" alt="AKMU 乐童音乐家 澳洲演唱会 墨尔本站" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+  <div class="body">
+  <div class="stub"><span class="when">9月18日 周五</span><span class="badge s-announced">已官宣</span></div>
+  <h3><a href="https://www.dealmoon.com.au/akmu-9/780283.html" target="_blank" rel="noopener">AKMU 乐童音乐家 澳洲演唱会 墨尔本站</a></h3>
+  <p class="en">AKMU Live in Melbourne</p>
+  <div class="meta"><span class="m">📍 Margaret Court Arena · 墨尔本</span></div>
+  <div class="foot"><a class="buy" href="https://www.dealmoon.com.au/akmu-9/780283.html" target="_blank" rel="noopener">详情 ↗</a></div>
+  </div>
+</article>
+<article class="card" data-city="悉尼" data-cat="演唱会">
+  <div class="art"><span class="ph">演</span><img src="https://imgcache.dealmoon.com/thumbimg.dealmoon.com/au2606/dealmoon/e1c/359/b68/b2a2acb35084c4214277956x1080x1080x200.jpeg_480_0_3_3969.jpeg" alt="AKMU 乐童音乐家 澳洲演唱会 悉尼站" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+  <div class="body">
+  <div class="stub"><span class="when">9月20日 周日</span><span class="badge s-announced">已官宣</span></div>
+  <h3><a href="https://www.dealmoon.com.au/akmu-9/780283.html" target="_blank" rel="noopener">AKMU 乐童音乐家 澳洲演唱会 悉尼站</a></h3>
+  <p class="en">AKMU Live in Sydney</p>
+  <div class="meta"><span class="m">📍 TikTok Entertainment Centre / ICC Sydney Theatre(待确认) · 悉尼</span></div>
+  <div class="foot"><a class="buy" href="https://www.dealmoon.com.au/akmu-9/780283.html" target="_blank" rel="noopener">详情 ↗</a></div>
+  </div>
+</article>
+</div></section>
+<section><h2><em>2026</em>十月</h2><div class="grid">
+<article class="card" data-city="墨尔本" data-cat="演唱会">
+  <div class="art"><span class="ph">演</span><img src="https://discover.ticketmaster.com.au/wp-content/uploads/2026/03/JaychouMel_Ticketmaster_2nd-Enhance-Artist-Page_2426x1365-2-1024x576.jpg" alt="周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+  <div class="body">
+  <div class="stub"><span class="when">10月17日 周六 · 19:30</span><span class="badge s-onsale">在售</span></div>
+  <h3><a href="https://discover.ticketmaster.com.au/music/jay-chou-carnival-ii-world-tour-in-australia-21666" target="_blank" rel="noopener">周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会</a></h3>
+  <p class="en">Jay Chou Carnival II World Tour — Melbourne</p>
+  <div class="meta"><span class="m">📍 Marvel Stadium · 墨尔本</span><span class="m">🎫 $208–$748 (+$9.90手续费)</span><span class="m">🏛 Ticketmaster</span></div>
+  <div class="foot"><a class="buy" href="https://discover.ticketmaster.com.au/music/jay-chou-carnival-ii-world-tour-in-australia-21666" target="_blank" rel="noopener">购票 ↗</a><a class="src" href="https://www.auyx.au/news/details/366818" target="_blank" rel="noopener">信源</a></div>
+  </div>
+</article>
+</div></section>
+<section><h2><em>2026</em>十一月</h2><div class="grid">
+<article class="card" data-city="悉尼" data-cat="演唱会">
+  <div class="art"><span class="ph">演</span><img src="https://discover.ticketmaster.com.au/wp-content/uploads/2026/03/JaychouMel_Ticketmaster_2nd-Enhance-Artist-Page_2426x1365-2-1024x576.jpg" alt="周杰伦「海洋 悉尼 嘉年华Ⅱ」世界巡回演唱会" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+  <div class="body">
+  <div class="stub"><span class="when">11月21日 周六 · 19:30</span><span class="badge s-onsale">在售</span></div>
+  <h3><a href="https://discover.ticketmaster.com.au/music/jay-chou-carnival-ii-world-tour-in-australia-21666" target="_blank" rel="noopener">周杰伦「海洋 悉尼 嘉年华Ⅱ」世界巡回演唱会</a></h3>
+  <p class="en">Jay Chou Carnival II World Tour — Sydney</p>
+  <div class="meta"><span class="m">📍 ENGIE Stadium (Sydney Olympic Park) · 悉尼</span><span class="m">🎫 $188–$748 (+$9.90手续费)</span><span class="m">🏛 Ticketmaster</span></div>
+  <div class="foot"><a class="buy" href="https://discover.ticketmaster.com.au/music/jay-chou-carnival-ii-world-tour-in-australia-21666" target="_blank" rel="noopener">购票 ↗</a><a class="src" href="https://auyx.au/news/details/369082" target="_blank" rel="noopener">信源</a></div>
+  </div>
+</article>
+</div></section>
+<section><h2><em>常驻</em>&amp;待定</h2><div class="grid">
+<article class="card" data-city="悉尼" data-cat="见面会">
+  <div class="art"><span class="ph">见</span></div>
+  <div class="body">
+  <div class="stub"><span class="when">日期待公布</span><span class="badge s-tbc">待核实</span></div>
+  <h3><a href="https://www.austickets.com.au/tickets" target="_blank" rel="noopener">周柏豪 PAKHO CHAU 悉尼粉丝见面会</a></h3>
+  <p class="en">Pakho Chau Fan Meeting — Sydney</p>
+  <div class="meta"><span class="m">📍 悉尼 · 场馆待公布</span><span class="m">🏛 AusTickets</span></div>
+  <div class="foot"><a class="buy" href="https://www.austickets.com.au/tickets" target="_blank" rel="noopener">购票 ↗</a><a class="src" href="https://m.austickets.com.au/tickets" target="_blank" rel="noopener">信源</a><span class="unv">ⓘ 信息待人工核实</span></div>
+  </div>
+</article>
+<article class="card" data-city="悉尼" data-cat="开放麦">
+  <div class="art"><span class="ph">开</span></div>
+  <div class="body">
+  <div class="stub"><span class="when">每周二 · 19:30</span><span class="badge s-onsale">在售</span></div>
+  <h3><a href="https://www.eventbrite.com/e/copy-of-rolling-donkey-tickets-1983189907399" target="_blank" rel="noopener">Rolling Donkey 中文喜剧开放麦(悉尼,每周二)</a></h3>
+  <p class="en">Rolling Donkey Chinese Comedy Open Mic — Sydney</p>
+  <div class="meta"><span class="m">📍 Chippo Hotel, 87-91 Abercrombie St, Chippendale · 悉尼</span><span class="m">🏛 Eventbrite</span></div>
+  <div class="foot"><a class="buy" href="https://www.eventbrite.com/e/copy-of-rolling-donkey-tickets-1983189907399" target="_blank" rel="noopener">购票 ↗</a><a class="src" href="https://www.eventbrite.com/e/copy-of-rolling-donkey-tickets-1983189907399" target="_blank" rel="noopener">信源</a></div>
+  </div>
+</article>
+<article class="card" data-city="墨尔本" data-cat="开放麦">
+  <div class="art"><span class="ph">开</span><img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1188051314%2F1908843963573%2F1%2Foriginal.20260702-013112?w=2000&amp;amp;auto=format%2Ccompress&amp;amp;q=75&amp;amp;sharp=10&amp;amp;rect=0%2C1332%2C8192%2C1408&amp;amp;s=133a889db1bbf169cc3c7d81764056d1" alt="候场喜剧 Loadingzone Comedy 开放麦(墨尔本,常驻)" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+  <div class="body">
+  <div class="stub"><span class="when">常驻(场次见Eventbrite) · 19:00</span><span class="badge s-onsale">在售</span></div>
+  <h3><a href="https://www.eventbrite.com/o/loadingzone-comedy-75417874333" target="_blank" rel="noopener">候场喜剧 Loadingzone Comedy 开放麦(墨尔本,常驻)</a></h3>
+  <p class="en">Loadingzone Comedy Open Mic — Melbourne</p>
+  <div class="meta"><span class="m">📍 Club Voltaire, 1st Floor/14 Raglan St, North Melbourne · 墨尔本</span><span class="m">🏛 Eventbrite</span></div>
+  <div class="foot"><a class="buy" href="https://www.eventbrite.com/o/loadingzone-comedy-75417874333" target="_blank" rel="noopener">购票 ↗</a><a class="src" href="https://www.dealmoon.com.au/post/3236587" target="_blank" rel="noopener">信源</a></div>
+  </div>
+</article>
+<article class="card" data-city="悉尼" data-cat="演唱会">
+  <div class="art"><span class="ph">演</span></div>
+  <div class="body">
+  <div class="stub"><span class="when">日期待公布</span><span class="badge s-tbc">待核实</span></div>
+  <h3><a href="https://www.dealmoon.com.au/post/3236987" target="_blank" rel="noopener">BIGBANG 世界巡演 悉尼站(已官宣,详情待公布)</a></h3>
+  <p class="en">BIGBANG World Tour — Sydney (announced)</p>
+  <div class="meta"><span class="m">📍 悉尼 · 场馆待公布</span></div>
+  <div class="foot"><a class="buy" href="https://www.dealmoon.com.au/post/3236987" target="_blank" rel="noopener">详情 ↗</a><span class="unv">ⓘ 信息待人工核实</span></div>
+  </div>
+</article>
+</div></section>
+
+<section id="board">
+  <h2><em>留言板</em>情报征集</h2>
+  <p style="font-size:13px;color:var(--tan);margin-bottom:12px">发现新演出?被黄牛坑过?想看谁来澳洲?留个言。</p>
+  <div style="border:2px dashed var(--line);border-radius:10px;padding:16px 18px;font-size:13px;color:var(--tan)">💬 留言板筹备中 —— 有演出情报或购票踩坑经历,先通过页脚小红书账号私信投稿。</div>
+</section>
+
+<div class="notice">
+  <h4>⚠ 防骗提示</h4>
+  <p>本站只收录官方售票渠道。微信群 / 小红书私聊转票诈骗高发(中国驻墨尔本总领馆已发布专门提醒),任何"低价转让""内部渠道"要求直接转账的,一律不要相信。二手票请只走带担保的正规平台。</p>
+</div>
+
+<footer>
+  <p>📮 想要"官宣即提醒"?订阅功能筹备中 —— 先关注小红书 @澳华演出雷达(占位)</p>
+  <p>数据更新于 2026-07-03 · 信息以主办方官方渠道为准 · 本站不售票、不转票</p>
+</footer>
+</div>
+
+<script>
+const state={city:"全部",cat:"全部"};
+document.querySelectorAll(".chip").forEach(ch=>ch.addEventListener("click",()=>{
+  const f=ch.dataset.f;state[f]=ch.dataset.v;
+  document.querySelectorAll(`.chip[data-f="${f}"]`).forEach(c=>c.classList.toggle("on",c===ch));
+  document.querySelectorAll(".card").forEach(card=>{
+    const ok=(state.city==="全部"||card.dataset.city===state.city)&&(state.cat==="全部"||card.dataset.cat===state.cat);
+    card.classList.toggle("hidden",!ok);
+  });
+  document.querySelectorAll("section").forEach(s=>{
+    if(!s.querySelector(".card"))return; // 留言板等非卡片区块不参与筛选
+    s.classList.toggle("hidden",!s.querySelector(".card:not(.hidden)"));
+  });
+}));
+</script>
+</body>
+</html>
