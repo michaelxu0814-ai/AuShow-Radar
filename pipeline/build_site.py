@@ -9,11 +9,11 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "site" / "index.html"
+OUT = ROOT / "docs" / "index.html"
 
 # 留言板(Cusdis匿名评论)。到 https://cusdis.com 免费注册建站后,把 App ID 填到这里重新build即可开启
 CUSDIS_APP_ID = ""
-SITE_URL = "https://aushow.example.com"  # 部署后改成真实域名(Cusdis回链用)
+SITE_URL = "https://michaelxu0814-ai.github.io/AuShow-Radar"  # 部署后改成真实域名(Cusdis回链用)
 
 STATUS = {
     "on_sale": ("在售", "s-onsale"),

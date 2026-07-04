@@ -9,7 +9,7 @@ sources.json          信息源清单(Exa搜索 / Jina网页 / 小红书)
 pipeline/fetch.py     抓取所有源 -> data/raw/<日期>/
 pipeline/parse.py     claude CLI 抽取演出条目 -> data/events.json(新条目 verified=false)
 pipeline/enrich.py    从购票页/信源页抓 og:image 海报
-pipeline/build_site.py 生成 site/index.html(单文件,零依赖)
+pipeline/build_site.py 生成 docs/index.html(单文件,零依赖)
 run_daily.sh          以上四步串联 + 有git远程时自动push
 data/events.json      唯一数据库,可直接手改
 ```
@@ -29,7 +29,7 @@ data/events.json      唯一数据库,可直接手改
 
 ## 发布上线(待办,两步)
 
-1. GitHub 建仓库 + 开 Pages(Settings→Pages→Deploy from branch,目录选 `/site`);push 用 memory 里的 gh token 方式
+1. GitHub 建仓库 + 开 Pages(Settings→Pages→Deploy from branch,目录选 `/docs`);push 用 memory 里的 gh token 方式
 2. `build_site.py` 顶部 `SITE_URL` 改为真实地址
 
 之后每天 09:00 自动更新自动上线,无需人工。
