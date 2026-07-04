@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "docs" / "index.html"
 
 # 留言板(Cusdis匿名评论)。到 https://cusdis.com 免费注册建站后,把 App ID 填到这里重新build即可开启
-CUSDIS_APP_ID = ""
+CUSDIS_APP_ID = "d140ace5-62f1-4d69-bee8-5efe86b9324a"
 SITE_URL = "https://michaelxu0814-ai.github.io/AuShow-Radar"  # 部署后改成真实域名(Cusdis回链用)
 
 STATUS = {
