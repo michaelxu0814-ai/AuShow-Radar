@@ -27,12 +27,12 @@ data/events.json      唯一数据库,可直接手改
 2. 海报图抽查:信源页若涉及多个演出,og:image 可能张冠李戴(已出过 BIGBANG 挂袁娅维海报的案例),错图置 `"image": null`
 3. 已结束的演出会自动不再展示(按日期过滤),不用手删
 
-## 发布上线(待办,两步)
+## 发布(已配置)
 
-1. GitHub 建仓库 + 开 Pages(Settings→Pages→Deploy from branch,目录选 `/docs`);push 用 memory 里的 gh token 方式
-2. `build_site.py` 顶部 `SITE_URL` 改为真实地址
-
-之后每天 09:00 自动更新自动上线,无需人工。
+- 线上地址: https://michaelxu0814-ai.github.io/AuShow-Radar/
+- 仓库: https://github.com/michaelxu0814-ai/AuShow-Radar (Pages: main 分支 /docs 目录)
+- git 凭证走 `gh auth setup-git`,不依赖 keychain
+- 每天 09:00 run_daily.sh 自动 push,Pages 随之自动更新(约1分钟延迟)
 
 ## 开启留言板(待办,5分钟)
 
