@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-04",
+  "updated": "2026-07-05",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -580,6 +580,25 @@
       "verified": false,
       "added": "2026-07-04",
       "image": null
+    },
+    {
+      "title_zh": "豆豆脱口秀专场《算你厉害》悉尼站",
+      "title_en": "Doudou Standup Comedy Tour - Sydney",
+      "artist": "豆豆",
+      "category": "脱口秀",
+      "city": "悉尼",
+      "venue": null,
+      "date": null,
+      "time": null,
+      "recurrence": null,
+      "price": "AUD $79/99/119/129/149（含剧场及票务平台手续费）",
+      "ticket_platform": "Ticketek",
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://nationaltheatre.org.au/whatson/doudou-standup-comedy-tour-congratulations/",
+      "verified": false,
+      "added": "2026-07-05",
+      "image": "https://nationaltheatre.org.au/wp-content/uploads/2026/05/豆豆海外墨尔本_Website-image-1080x1080-1-1024x1024.png"
     }
   ]
 }
