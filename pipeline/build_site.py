@@ -84,7 +84,8 @@ def card(e):
 
 def main():
     db = json.loads((ROOT / "data" / "events.json").read_text())
-    events = db["events"]
+    # 质量闸门: 链接校验不通过的条目不上线(verify_links.py 判定;宁可不显示,不可错链接)
+    events = [e for e in db["events"] if e.get("link_ok") is not False]
     today = date.today().isoformat()
 
     dated = sorted([e for e in events if e.get("date") and e["date"] >= today],

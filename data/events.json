@@ -167,39 +167,43 @@
       "artist": "Attack on Titan in Concert",
       "category": "音乐会",
       "city": "墨尔本",
-      "venue": null,
-      "date": "2026-07-07",
+      "venue": "Arts Centre Melbourne - Hamer Hall",
+      "date": "2026-07-06",
       "time": null,
       "recurrence": null,
       "price": "$137起",
       "ticket_platform": null,
-      "ticket_url": null,
+      "ticket_url": "https://www.castiglione.com.au/attackontitan",
       "status": "tbc",
-      "source_url": "https://www.dealmoon.com.au/2026/776377.html",
+      "source_url": "https://www.castiglione.com.au/attackontitan",
       "verified": false,
       "added": "2026-07-03",
-      "notes": "二次元向,华人受众高度重合;场馆和购票链接待核实",
-      "image": null
+      "notes": "主办方Castiglione官方页;此前信源写7月7日,以官方购票页为准",
+      "image": null,
+      "link_ok": true,
+      "link_note": null
     },
     {
-      "title_zh": "BIGBANG 世界巡演 悉尼站(已官宣,详情待公布)",
+      "title_zh": "BIGBANG 20周年世界巡演 悉尼站",
       "title_en": "BIGBANG World Tour — Sydney (announced)",
       "artist": "BIGBANG",
       "category": "演唱会",
       "city": "悉尼",
       "venue": null,
-      "date": null,
+      "date": "2026-10-31",
       "time": null,
       "recurrence": null,
       "price": null,
       "ticket_platform": null,
       "ticket_url": null,
-      "status": "tbc",
-      "source_url": "https://www.dealmoon.com.au/post/3236987",
+      "status": "announced",
+      "source_url": "https://www.dealmoon.com.au/bigbang-20-10-31/780385.html",
       "verified": false,
       "added": "2026-07-03",
-      "notes": "仅见Dealmoon社区帖提及官宣,日期场馆票务均未核实",
-      "image": null
+      "notes": "澳洲唯一一场,体育场级;场馆和开票时间待官方公布",
+      "image": null,
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "墨尔周二本地下脱口秀",
@@ -218,7 +222,9 @@
       "source_url": "https://jyq.com.au/en/event/%e5%a2%a8%e5%b0%94%e5%91%a8%e4%ba%8c%e6%9c%ac%e5%9c%b0%e4%b8%8b%e8%84%b1%e5%8f%a3%e7%a7%80-underground-comedy/",
       "verified": false,
       "added": "2026-07-04",
-      "image": "https://jyq.com.au/wp-content/uploads/2026/01/墨尔本地下脱口秀.jpeg"
+      "image": "https://jyq.com.au/wp-content/uploads/2026/01/墨尔本地下脱口秀.jpeg",
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "《悉尼vs墨尔本双城脱口秀拼盘》之 悉尼站",
@@ -237,7 +243,9 @@
       "source_url": "https://www.eventbrite.com.au/o/loadingzone-comedy-75417874333",
       "verified": false,
       "added": "2026-07-04",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1188051314%2F1908843963573%2F1%2Foriginal.20260702-013112?w=2000&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;rect=0%2C1332%2C8192%2C1408&amp;s=133a889db1bbf169cc3c7d81764056d1"
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1188051314%2F1908843963573%2F1%2Foriginal.20260702-013112?w=2000&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;rect=0%2C1332%2C8192%2C1408&amp;s=133a889db1bbf169cc3c7d81764056d1",
+      "link_ok": false,
+      "link_note": "页面不含艺人/演出名: 候场喜剧Loadingzone Comedy"
     },
     {
       "title_zh": "XG 澳洲巡演 THE CORE",
@@ -245,18 +253,20 @@
       "artist": "XG",
       "category": "演唱会",
       "city": "墨尔本",
-      "venue": null,
+      "venue": "Rod Laver Arena",
       "date": null,
       "time": null,
       "recurrence": null,
       "price": null,
-      "ticket_platform": null,
-      "ticket_url": null,
+      "ticket_platform": "Ticketek (Frontier Touring)",
+      "ticket_url": "https://www.frontiertouring.com/xg",
       "status": "tbc",
-      "source_url": "https://www.dealmoon.com.au/148-ii/777935.html",
+      "source_url": "https://rodlaverarena.com.au/event/xg-world-tour-the-core-melbourne-2026/",
       "verified": false,
       "added": "2026-07-04",
-      "image": "https://imgcache.dealmoon.com/thumbimg.dealmoon.com/au2604/dealmoon/282/0bc/c9d/74ba3f1011e637cfd409633x1072x1072x328.jpeg_480_0_3_c879.jpeg"
+      "image": "https://imgcache.dealmoon.com/thumbimg.dealmoon.com/au2604/dealmoon/282/0bc/c9d/74ba3f1011e637cfd409633x1072x1072x328.jpeg_480_0_3_c879.jpeg",
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "XG 澳洲巡演 THE CORE",
@@ -269,13 +279,15 @@
       "time": null,
       "recurrence": null,
       "price": null,
-      "ticket_platform": null,
-      "ticket_url": null,
+      "ticket_platform": "Ticketek (Frontier Touring)",
+      "ticket_url": "https://www.frontiertouring.com/xg",
       "status": "tbc",
-      "source_url": "https://www.dealmoon.com.au/148-ii/777935.html",
+      "source_url": "https://au.rollingstone.com/music/music-news/xg-australia-tour-dates-tickets-94020/",
       "verified": false,
       "added": "2026-07-04",
-      "image": "https://imgcache.dealmoon.com/thumbimg.dealmoon.com/au2604/dealmoon/282/0bc/c9d/74ba3f1011e637cfd409633x1072x1072x328.jpeg_480_0_3_c879.jpeg"
+      "image": "https://imgcache.dealmoon.com/thumbimg.dealmoon.com/au2604/dealmoon/282/0bc/c9d/74ba3f1011e637cfd409633x1072x1072x328.jpeg_480_0_3_c879.jpeg",
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "队长 YoungCaptain 新专辑巡演 澳洲场",
@@ -291,10 +303,12 @@
       "ticket_platform": null,
       "ticket_url": null,
       "status": "tbc",
-      "source_url": "https://www.dealmoon.com.au/2026/776377.html",
+      "source_url": "https://www.dealmoon.nz/youngcaptain/779868.html",
       "verified": false,
       "added": "2026-07-04",
-      "image": "https://imgcache.dealmoon.com/thumbimg.dealmoon.com/au2604/dealmoon/50e/820/63d/e17c06198b5edf3bcf74540x800x800x944.png_480_0_3_acf7.png"
+      "image": "https://imgcache.dealmoon.com/thumbimg.dealmoon.com/au2604/dealmoon/50e/820/63d/e17c06198b5edf3bcf74540x800x800x944.png_480_0_3_acf7.png",
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "队长 YoungCaptain 新专辑巡演 澳洲场",
@@ -310,10 +324,12 @@
       "ticket_platform": null,
       "ticket_url": null,
       "status": "tbc",
-      "source_url": "https://www.dealmoon.com.au/2026/776377.html",
+      "source_url": "https://www.dealmoon.nz/youngcaptain/779868.html",
       "verified": false,
       "added": "2026-07-04",
-      "image": "https://imgcache.dealmoon.com/thumbimg.dealmoon.com/au2604/dealmoon/50e/820/63d/e17c06198b5edf3bcf74540x800x800x944.png_480_0_3_acf7.png"
+      "image": "https://imgcache.dealmoon.com/thumbimg.dealmoon.com/au2604/dealmoon/50e/820/63d/e17c06198b5edf3bcf74540x800x800x944.png_480_0_3_acf7.png",
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "郑宜农「Moon Phases 圆缺2.0」澳洲巡演",
@@ -326,13 +342,15 @@
       "time": null,
       "recurrence": null,
       "price": "$87起",
-      "ticket_platform": null,
-      "ticket_url": null,
+      "ticket_platform": "Moshtix",
+      "ticket_url": "https://www.moshtix.com.au/v2/event/enno-cheng%E3%80%8Amoon-phases-2-0%E3%80%8Bworld-tour/176766",
       "status": "tbc",
-      "source_url": "https://www.dealmoon.com.au/148-ii/777935.html",
+      "source_url": "https://www.dealmoon.com.au/moon-phases-2-0-87/777127.html",
       "verified": false,
       "added": "2026-07-04",
-      "image": "https://imgcache.dealmoon.com/thumbimg.dealmoon.com/au2604/dealmoon/282/0bc/c9d/74ba3f1011e637cfd409633x1072x1072x328.jpeg_480_0_3_c879.jpeg"
+      "image": "https://imgcache.dealmoon.com/thumbimg.dealmoon.com/au2604/dealmoon/282/0bc/c9d/74ba3f1011e637cfd409633x1072x1072x328.jpeg_480_0_3_c879.jpeg",
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "郑宜农「Moon Phases 圆缺2.0」澳洲巡演",
@@ -348,10 +366,12 @@
       "ticket_platform": null,
       "ticket_url": null,
       "status": "tbc",
-      "source_url": "https://www.dealmoon.com.au/148-ii/777935.html",
+      "source_url": "https://www.dealmoon.com.au/moon-phases-2-0-87/777127.html",
       "verified": false,
       "added": "2026-07-04",
-      "image": "https://imgcache.dealmoon.com/thumbimg.dealmoon.com/au2604/dealmoon/282/0bc/c9d/74ba3f1011e637cfd409633x1072x1072x328.jpeg_480_0_3_c879.jpeg"
+      "image": "https://imgcache.dealmoon.com/thumbimg.dealmoon.com/au2604/dealmoon/282/0bc/c9d/74ba3f1011e637cfd409633x1072x1072x328.jpeg_480_0_3_c879.jpeg",
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "候场喜剧“她在场”2026公益企划|格斗体验课",
@@ -370,7 +390,9 @@
       "source_url": "https://www.eventbrite.com/o/loadingzone-comedy-75417874333",
       "verified": false,
       "added": "2026-07-04",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1188051314%2F1908843963573%2F1%2Foriginal.20260702-013112?w=2000&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;rect=0%2C1332%2C8192%2C1408&amp;s=133a889db1bbf169cc3c7d81764056d1"
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1188051314%2F1908843963573%2F1%2Foriginal.20260702-013112?w=2000&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;rect=0%2C1332%2C8192%2C1408&amp;s=133a889db1bbf169cc3c7d81764056d1",
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "Rolling Donkey 四城巡演（墨尔本站）",
@@ -389,7 +411,9 @@
       "source_url": "https://www.dealmoon.com.au/post/3222356",
       "verified": false,
       "added": "2026-07-04",
-      "image": "https://imgcache.dealmoon.com/fsvrugccache.dealmoon.com/us2605/ugc/f1b/43d/d03/efd3fe4e1c09679b9fccedcx1080x1443x270.jpeg_480_0_3_1fc5.jpeg"
+      "image": "https://imgcache.dealmoon.com/fsvrugccache.dealmoon.com/us2605/ugc/f1b/43d/d03/efd3fe4e1c09679b9fccedcx1080x1443x270.jpeg_480_0_3_1fc5.jpeg",
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "Rolling Donkey 四城巡演（悉尼站）",
@@ -408,7 +432,9 @@
       "source_url": "https://www.dealmoon.com.au/post/3222356",
       "verified": false,
       "added": "2026-07-04",
-      "image": "https://imgcache.dealmoon.com/fsvrugccache.dealmoon.com/us2605/ugc/f1b/43d/d03/efd3fe4e1c09679b9fccedcx1080x1443x270.jpeg_480_0_3_1fc5.jpeg"
+      "image": "https://imgcache.dealmoon.com/fsvrugccache.dealmoon.com/us2605/ugc/f1b/43d/d03/efd3fe4e1c09679b9fccedcx1080x1443x270.jpeg_480_0_3_1fc5.jpeg",
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "Rolling Donkey 四城巡演（珀斯站）",
@@ -427,7 +453,9 @@
       "source_url": "https://www.dealmoon.com.au/post/3222356",
       "verified": false,
       "added": "2026-07-04",
-      "image": "https://imgcache.dealmoon.com/fsvrugccache.dealmoon.com/us2605/ugc/f1b/43d/d03/efd3fe4e1c09679b9fccedcx1080x1443x270.jpeg_480_0_3_1fc5.jpeg"
+      "image": "https://imgcache.dealmoon.com/fsvrugccache.dealmoon.com/us2605/ugc/f1b/43d/d03/efd3fe4e1c09679b9fccedcx1080x1443x270.jpeg_480_0_3_1fc5.jpeg",
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "Rolling Donkey 四城巡演（布里斯班站）",
@@ -446,7 +474,9 @@
       "source_url": "https://www.dealmoon.com.au/post/3222356",
       "verified": false,
       "added": "2026-07-04",
-      "image": "https://imgcache.dealmoon.com/fsvrugccache.dealmoon.com/us2605/ugc/f1b/43d/d03/efd3fe4e1c09679b9fccedcx1080x1443x270.jpeg_480_0_3_1fc5.jpeg"
+      "image": "https://imgcache.dealmoon.com/fsvrugccache.dealmoon.com/us2605/ugc/f1b/43d/d03/efd3fe4e1c09679b9fccedcx1080x1443x270.jpeg_480_0_3_1fc5.jpeg",
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "肇风一年一度的免费音乐会",
@@ -465,7 +495,9 @@
       "source_url": "https://www.xiaohongshu.com/user/profile/6669a7410000000003033496?subTab=note&tab=note",
       "verified": false,
       "added": "2026-07-04",
-      "image": null
+      "image": null,
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "澳大利亚国际音乐艺术节",
@@ -484,7 +516,9 @@
       "source_url": "https://www.austickets.com.au/tickets/eb1206f4-ff23-415f-a1f6-d169ff11afb0",
       "verified": false,
       "added": "2026-07-04",
-      "image": null
+      "image": null,
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "张震岳 <跟着感觉走> 巡回演出 - 悉尼站",
@@ -503,7 +537,9 @@
       "source_url": "https://www.austickets.com.au/tickets/a569dfaa-d050-48be-b3e5-e7241d88f33b",
       "verified": false,
       "added": "2026-07-04",
-      "image": null
+      "image": null,
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "张震岳 <跟着感觉走> 巡回演出 - 墨尔本站",
@@ -522,7 +558,9 @@
       "source_url": "https://www.austickets.com.au/tickets/a569dfaa-d050-48be-b3e5-e7241d88f33b",
       "verified": false,
       "added": "2026-07-04",
-      "image": null
+      "image": null,
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "LBI利比<利刃出鞘>澳洲演唱会 - 悉尼站",
@@ -541,7 +579,9 @@
       "source_url": "https://www.austickets.com.au/tickets/f4f1011e-1f19-40be-96d6-8b2b3f6eff29",
       "verified": false,
       "added": "2026-07-04",
-      "image": null
+      "image": null,
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "LBI利比<利刃出鞘>澳洲演唱会 - 墨尔本站",
@@ -560,7 +600,9 @@
       "source_url": "https://www.austickets.com.au/tickets/f4f1011e-1f19-40be-96d6-8b2b3f6eff29",
       "verified": false,
       "added": "2026-07-04",
-      "image": null
+      "image": null,
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "周柏豪 Blooming Chapter 粉丝见面演唱会 - 悉尼站",
@@ -579,7 +621,9 @@
       "source_url": "https://www.austickets.com.au/tickets/a70885be-f9f0-4491-acd5-882d120ef494",
       "verified": false,
       "added": "2026-07-04",
-      "image": null
+      "image": null,
+      "link_ok": true,
+      "link_note": null
     },
     {
       "title_zh": "豆豆脱口秀专场《算你厉害》悉尼站",
@@ -598,7 +642,9 @@
       "source_url": "https://nationaltheatre.org.au/whatson/doudou-standup-comedy-tour-congratulations/",
       "verified": false,
       "added": "2026-07-05",
-      "image": "https://nationaltheatre.org.au/wp-content/uploads/2026/05/豆豆海外墨尔本_Website-image-1080x1080-1-1024x1024.png"
+      "image": "https://nationaltheatre.org.au/wp-content/uploads/2026/05/豆豆海外墨尔本_Website-image-1080x1080-1-1024x1024.png",
+      "link_ok": true,
+      "link_note": null
     }
   ]
 }

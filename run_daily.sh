@@ -13,10 +13,13 @@ LOG="logs/$(date +%F).log"
   echo "--- [2/4] parse (claude CLI)"
   python3 pipeline/parse.py || echo "parse FAILED(继续)"
 
-  echo "--- [3/4] enrich images"
+  echo "--- [3/5] verify links (质量闸门)"
+  python3 pipeline/verify_links.py || echo "verify FAILED(继续)"
+
+  echo "--- [4/5] enrich images"
   python3 pipeline/enrich.py || echo "enrich FAILED(继续)"
 
-  echo "--- [4/4] build site"
+  echo "--- [5/5] build site"
   python3 pipeline/build_site.py
 
   # 已配置 git 远程仓库时自动提交发布(GitHub Pages 即自动更新)
