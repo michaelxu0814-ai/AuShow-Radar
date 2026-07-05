@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05",
+  "updated": "2026-07-06",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -661,6 +661,27 @@
       "image": "https://nationaltheatre.org.au/wp-content/uploads/2026/05/豆豆海外墨尔本_Website-image-1080x1080-1-1024x1024.png",
       "link_ok": true,
       "link_note": null
+    },
+    {
+      "title_zh": "墨尔本周二免费脱口秀",
+      "title_en": "Best Comedy in Brunswick",
+      "artist": null,
+      "category": "脱口秀",
+      "city": "墨尔本",
+      "venue": "Red Betty, Sydney Road, Brunswick VIC",
+      "date": "2026-07-07",
+      "time": "19:30-21:30",
+      "recurrence": "每周二",
+      "price": "免费",
+      "ticket_platform": "Eventbrite",
+      "ticket_url": null,
+      "status": "on_sale",
+      "source_url": "https://jyq.com.au/event/best-comedy-in-brunswick/",
+      "verified": false,
+      "added": "2026-07-06",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://jyq.com.au/wp-content/uploads/2025/12/墨尔本免费脱口秀表演.jpeg"
     }
   ]
 }
