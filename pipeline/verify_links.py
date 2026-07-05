@@ -63,10 +63,14 @@ def main():
     db = json.loads(EVENTS_FILE.read_text())
     checked = ok = bad = 0
     for e in db["events"]:
-        if e.get("verified"):
-            continue
+        # verified 条目同样校验(种子数据也出过首页链接的雷),结果缓存,不重复抓
         if not recheck_all and "link_ok" in e:
             continue
+        # 首页级 ticket_url 不指向具体演出,剥掉让标题回退到信源链接
+        from urllib.parse import urlparse
+        if e.get("ticket_url") and urlparse(e["ticket_url"]).path.strip("/") in ("", "search"):
+            print(f"⚠ 剥离首页级购票链接: {(e.get('title_zh') or '')[:24]} | {e['ticket_url']}")
+            e["ticket_url"] = None
         url = e.get("ticket_url") or e.get("source_url")
         name = (e.get("title_zh") or e.get("title_en") or "")[:24]
         if not url:
