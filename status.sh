@@ -5,8 +5,8 @@ cd "$(dirname "$0")"
 echo "━━━ 澳华演出雷达 项目状态 $(date '+%F %T') ━━━"
 
 echo "\n【线上站点】"
-curl -s -o /dev/null -w "  https://michaelxu0814-ai.github.io/AuShow-Radar/ -> HTTP %{http_code}\n" \
-  "https://michaelxu0814-ai.github.io/AuShow-Radar/"
+curl -s -o /dev/null -w "  https://aushow.com.au/ -> HTTP %{http_code}\n" \
+  "https://aushow.com.au/"
 
 echo "\n【数据库】"
 python3 -c "

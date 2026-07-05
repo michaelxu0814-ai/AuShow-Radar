@@ -29,7 +29,7 @@ data/events.json      唯一数据库,可直接手改
 
 ## 发布(已配置)
 
-- 线上地址: https://michaelxu0814-ai.github.io/AuShow-Radar/
+- 线上地址: https://aushow.com.au/
 - 仓库: https://github.com/michaelxu0814-ai/AuShow-Radar (Pages: main 分支 /docs 目录)
 - git 凭证走 `gh auth setup-git`,不依赖 keychain
 - 每天 09:00 run_daily.sh 自动 push,Pages 随之自动更新(约1分钟延迟)
