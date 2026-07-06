@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06",
+  "updated": "2026-07-07",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -682,6 +682,48 @@
       "link_ok": true,
       "link_note": null,
       "image": "https://jyq.com.au/wp-content/uploads/2025/12/墨尔本免费脱口秀表演.jpeg"
+    },
+    {
+      "title_zh": "《墨尔本vs悉尼双城脱口秀拼盘》之 墨尔本站",
+      "title_en": null,
+      "artist": null,
+      "category": "脱口秀",
+      "city": "墨尔本",
+      "venue": "Library at The Dock",
+      "date": null,
+      "time": "7:30 PM",
+      "recurrence": null,
+      "price": "From $28.00",
+      "ticket_platform": "Eventbrite",
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://www.eventbrite.com.au/o/loadingzone-comedy-75417874333",
+      "verified": false,
+      "added": "2026-07-07",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1188051314%2F1908843963573%2F1%2Foriginal.20260702-013112?w=2000&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;rect=0%2C1332%2C8192%2C1408&amp;s=133a889db1bbf169cc3c7d81764056d1"
+    },
+    {
+      "title_zh": "野陆喜剧周五开放麦 - 悉尼",
+      "title_en": null,
+      "artist": "野陆喜剧 Wildland Comedy",
+      "category": "开放麦",
+      "city": "悉尼",
+      "venue": "Arium of Mascot, Mascot NSW",
+      "date": null,
+      "time": "19:30",
+      "recurrence": "每周五",
+      "price": null,
+      "ticket_platform": "Eventbrite",
+      "ticket_url": "https://www.eventbrite.com.au/e/1958748873609",
+      "status": "tbc",
+      "source_url": "https://www.eventbrite.com.au/e/1958748873609",
+      "verified": false,
+      "added": "2026-07-07",
+      "link_ok": true,
+      "link_note": null,
+      "image": null
     }
   ]
 }
