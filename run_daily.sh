@@ -32,3 +32,10 @@ LOG="logs/$(date +%F).log"
 
   echo "===== done $(date '+%F %T') ====="
 } >> "$LOG" 2>&1
+
+# 失败告警: 任一环节FAILED或push未发生 -> 写入组合例外队列 + 系统通知
+if grep -q "FAILED" "$LOG" || ! grep -q "pushed to origin\|no git remote" "$LOG"; then
+  ISSUE=$(grep -m1 "FAILED" "$LOG" || echo "push未完成")
+  echo "- $(date +%F) | AuShow | run_daily 异常: $ISSUE | 查 logs/$(date +%F).log" >> /Users/reanne/Projects/EXCEPTIONS.md
+  osascript -e "display notification \"run_daily 异常,已写入例外队列\" with title \"AuShow Radar\"" 2>/dev/null
+fi
