@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-18",
+  "updated": "2026-07-19",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -1228,6 +1228,27 @@
       "link_ok": false,
       "link_note": "页面不含艺人/演出名: AusTickets - 致力于打造全澳最实时，方便，快捷的华人票务销售网络平台",
       "image": null
+    },
+    {
+      "title_zh": "王嘉尔 2025-2026 巡演 澳洲站（待官宣）",
+      "title_en": null,
+      "artist": "王嘉尔",
+      "category": "演唱会",
+      "city": null,
+      "venue": null,
+      "date": null,
+      "time": null,
+      "recurrence": null,
+      "price": null,
+      "ticket_platform": null,
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://www.dealmoon.com.au/guide/1403245",
+      "verified": false,
+      "added": "2026-07-19",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://imgcache.dealmoon.com/thumbimg.dealmoon.com/au2606/dealmoon/694/3fc/c6e/286a42f62eebc3f40edd8fdx1440x810x266.jpeg_480_0_3_c262.jpeg"
     }
   ]
 }
