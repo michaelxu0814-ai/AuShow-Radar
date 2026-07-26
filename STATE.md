@@ -2,7 +2,7 @@
 
 > 每次会话开场先读本文件 + 跑 `./status.sh`。技术结构与运维手册见 README.md。
 
-最后更新：2026-07-08
+最后更新：2026-07-26
 
 ## 部署事实（已验证）
 
@@ -16,6 +16,7 @@
 1. **详情页跳错演出**（袁娅维点进去是别的演出）：deep link 修复 + verifier 覆盖 verified 条目（commit 3966ddf）。改 build/parse 后必须抽查 3 条演出的跳转。
 2. **GoDaddy 默认页顶掉网站**：DNS 变更后必须 `dig +short aushow.com.au` + curl 真实内容验证，不能只看 HTTP 200。
 3. **海报张冠李戴**（BIGBANG 挂袁娅维图）：og:image 多演出页面会错，周审时错图置 `"image": null`。
+4. **push 长期被拒导致12个commit积压未推送**（2026-07-26发现并修复）：gh 全局 active account 常被 AUComplianceAI 那边的 `gh auth switch -u UEXU` 切走，AuShow 这边 push 到 michaelxu0814-ai/AuShow-Radar 就被拒(403)。`run_daily.sh` 的 push 步骤已改为显式用 `gh auth token -u michaelxu0814-ai` 现取token拼URL推送，不再依赖 gh 的全局 active account 状态。已手动补推积压的12个commit并验证新推送方式生效。
 
 ## 每周人工职责（约 20 分钟，质量闸门）
 

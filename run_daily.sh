@@ -25,7 +25,12 @@ LOG="logs/$(date +%F).log"
   # 已配置 git 远程仓库时自动提交发布(GitHub Pages 即自动更新)
   if git rev-parse --git-dir >/dev/null 2>&1 && git remote get-url origin >/dev/null 2>&1; then
     git add -A
-    git commit -m "daily update $(date +%F)" >/dev/null 2>&1 && git push && echo "pushed to origin"
+    git commit -m "daily update $(date +%F)" >/dev/null 2>&1
+    # 显式用 michaelxu0814-ai 账号推送(gh 全局 active account 常被 AUComplianceAI 那边切成 UEXU,
+    # 导致 push 被拒),token 现取现用不落盘
+    if git push "https://michaelxu0814-ai:$(gh auth token -u michaelxu0814-ai)@github.com/michaelxu0814-ai/AuShow-Radar.git" HEAD:main; then
+      echo "pushed to origin"
+    fi
   else
     echo "no git remote, site updated locally only"
   fi
