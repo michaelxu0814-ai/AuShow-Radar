@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-01",
+  "updated": "2026-08-02",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -1417,6 +1417,48 @@
       "link_ok": false,
       "link_note": "页面不含艺人/演出名: AusTickets - 致力于打造全澳最实时，方便，快捷的华人票务销售网络平台",
       "image": null
+    },
+    {
+      "title_zh": "张慧个人中英文专场澳洲巡演 悉尼站",
+      "title_en": null,
+      "artist": "张慧 Zhang Hui",
+      "category": "脱口秀",
+      "city": "悉尼",
+      "venue": null,
+      "date": null,
+      "time": null,
+      "recurrence": null,
+      "price": null,
+      "ticket_platform": null,
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://happeningnext.com/event/%E5%80%99%E5%9C%BA%E5%96%9C%E5%89%A77%E6%9C%8831%E5%8F%B7%E6%98%9F%E6%9C%9F%E4%BA%94-%E5%A2%A8%E5%B0%94%E6%9C%AC%E4%B8%AD%E6%96%87%E5%BC%80%E6%94%BE%E9%BA%A6-eid1ef0l3girefr",
+      "verified": false,
+      "added": "2026-08-02",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://cdn.happeningnext.com/events9/banners/5e93e4bd502de3689586f2a058f5dea81972e9c2cb2e1aea7b7cceae1445f911-rimg-w1024-h732-dc121112-gmir.jpg?v=1785388031"
+    },
+    {
+      "title_zh": "张慧个人中英文专场澳洲巡演 阿德莱德站",
+      "title_en": null,
+      "artist": "张慧 Zhang Hui",
+      "category": "脱口秀",
+      "city": "其他",
+      "venue": null,
+      "date": null,
+      "time": null,
+      "recurrence": null,
+      "price": null,
+      "ticket_platform": null,
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://happeningnext.com/event/%E5%80%99%E5%9C%BA%E5%96%9C%E5%89%A77%E6%9C%8831%E5%8F%B7%E6%98%9F%E6%9C%9F%E4%BA%94-%E5%A2%A8%E5%B0%94%E6%9C%AC%E4%B8%AD%E6%96%87%E5%BC%80%E6%94%BE%E9%BA%A6-eid1ef0l3girefr",
+      "verified": false,
+      "added": "2026-08-02",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://cdn.happeningnext.com/events9/banners/5e93e4bd502de3689586f2a058f5dea81972e9c2cb2e1aea7b7cceae1445f911-rimg-w1024-h732-dc121112-gmir.jpg?v=1785388031"
     }
   ]
 }
