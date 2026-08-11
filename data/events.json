@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-11",
+  "updated": "2026-08-12",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -1480,6 +1480,48 @@
       "link_ok": true,
       "link_note": null,
       "image": "https://images.humanitix.com/i/a832655d-15e7-46f6-934a-2f5efa543395.png@seo-500.jpg"
+    },
+    {
+      "title_zh": "告五人 Accusefive 澳洲巡演 墨尔本站",
+      "title_en": "Accusefive Australia Tour Melbourne",
+      "artist": "告五人 Accusefive",
+      "category": "演唱会",
+      "city": "墨尔本",
+      "venue": "Festival Hall",
+      "date": null,
+      "time": null,
+      "recurrence": null,
+      "price": null,
+      "ticket_platform": null,
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://www.instagram.com/reel/DU49zdak3VU/",
+      "verified": false,
+      "added": "2026-08-12",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://scontent.cdninstagram.com/v/t51.71878-15/628583260_1462487385273146_4225386924476517717_n.jpg?stp=cmp1_dst-jpg_e35_s640x640_tt6&amp;_nc_cat=102&amp;ccb=7-5&amp;_nc_sid=18de74&amp;efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&amp;_nc_ohc=lKd4h_kgo08Q7kNvwFk8HiK&amp;_nc_oc=AdofNIOzNORGdvn94ZhJnkGwmq_ETEtb4sYjOWky62b0dCJ0iDdaVntALnuXkatMmkNjtGmPJv8WfngYaqiplxSV&amp;_nc_zt=23&amp;_nc_ht=scontent.cdninstagram.com&amp;_nc_gid=jpyVlnLgujwa7XQzXD3V3g&amp;_nc_ss=7f60f&amp;oh=00_AQFwJHej9iEiUal046bBH_W4cA-v5gcO7_aqD-OD7W1KtQ&amp;oe=6A816AD5"
+    },
+    {
+      "title_zh": "告五人 Accusefive 澳洲巡演 悉尼站",
+      "title_en": "Accusefive Australia Tour Sydney",
+      "artist": "告五人 Accusefive",
+      "category": "演唱会",
+      "city": "悉尼",
+      "venue": "Darling Harbour Theatre",
+      "date": null,
+      "time": null,
+      "recurrence": null,
+      "price": null,
+      "ticket_platform": null,
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://www.instagram.com/reel/DU49zdak3VU/",
+      "verified": false,
+      "added": "2026-08-12",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://scontent.cdninstagram.com/v/t51.71878-15/628583260_1462487385273146_4225386924476517717_n.jpg?stp=cmp1_dst-jpg_e35_s640x640_tt6&amp;_nc_cat=102&amp;ccb=7-5&amp;_nc_sid=18de74&amp;efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&amp;_nc_ohc=lKd4h_kgo08Q7kNvwFk8HiK&amp;_nc_oc=AdofNIOzNORGdvn94ZhJnkGwmq_ETEtb4sYjOWky62b0dCJ0iDdaVntALnuXkatMmkNjtGmPJv8WfngYaqiplxSV&amp;_nc_zt=23&amp;_nc_ht=scontent.cdninstagram.com&amp;_nc_gid=ZMmNeUoy3I53MAYw8GnmPw&amp;_nc_ss=7f60f&amp;oh=00_AQHcX8vemDhkP1h1qzRCCn5vMVsG_OA46ePm3a8fnrHnow&amp;oe=6A816AD5"
     }
   ]
 }

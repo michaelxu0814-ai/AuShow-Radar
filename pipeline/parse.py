@@ -59,7 +59,7 @@ def extract(raw_text: str, known: str) -> list:
     prompt = (PROMPT.replace("{today}", date.today().isoformat())
                     .replace("{known}", known) + raw_text[:12000])
     p = subprocess.run(
-        ["claude", "-p", prompt, "--output-format", "text"],
+        ["claude", "-p", prompt, "--model", "claude-opus-5", "--output-format", "text"],
         capture_output=True, text=True, timeout=300,
     )
     out = p.stdout.strip()

@@ -5,12 +5,9 @@ cd "$(dirname "$0")"
 mkdir -p logs
 LOG="logs/$(date +%F).log"
 
-# 2026-08-03: 主账号Claude月度用量106%超限,临时切DeepSeek(Anthropic兼容接口)
-# 跑pipeline/parse.py里的claude调用,不影响其他会话。凭证来自CC-Switch本地配置
-# (~/.cc-switch/cc-switch.db)。额度恢复后删掉下面三行export即可回退。
-export ANTHROPIC_BASE_URL="https://api.deepseek.com/anthropic"
-export ANTHROPIC_AUTH_TOKEN="sk-2df46abe788c4d29aef75f21ede23581"
-export ANTHROPIC_MODEL="DeepSeek-V4-pro"
+# 2026-08-11: 额度已恢复,切回默认Anthropic后端(DeepSeek临时方案已弃用,
+# 2026-08-03~08-09期间实测故障率约43%)。pipeline/parse.py 的claude调用已显式指定
+# --model claude-opus-5(用户指令)。
 
 {
   echo "===== run_daily $(date '+%F %T') ====="
