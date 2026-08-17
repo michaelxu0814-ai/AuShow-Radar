@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17",
+  "updated": "2026-08-18",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -1648,6 +1648,48 @@
       "link_ok": true,
       "link_note": null,
       "image": null
+    },
+    {
+      "title_zh": "周三开放麦",
+      "title_en": null,
+      "artist": "新南脱口秀俱乐部",
+      "category": "开放麦",
+      "city": "悉尼",
+      "venue": "G06 Central Lecture Block, Kensington, NSW",
+      "date": null,
+      "time": "7 PM - 9 PM",
+      "recurrence": "每周三",
+      "price": null,
+      "ticket_platform": "Eventbrite",
+      "ticket_url": "https://www.eventbrite.com/e/1983059980785",
+      "status": "tbc",
+      "source_url": "https://www.eventbrite.com/e/1983059980785",
+      "verified": false,
+      "added": "2026-08-18",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://www.eventbrite.com/e/_next/image?url=https%3A%2F%2Fimg.evbuc.com%2Fhttps%253A%252F%252Fcdn.evbuc.com%252Fimages%252F1177446340%252F2991982142992%252F1%252Foriginal.20260213-062541%3Fw%3D940%26auto%3Dformat%252Ccompress%26q%3D75%26sharp%3D10%26rect%3D508%252C0%252C2580%252C1290%26s%3D49b3fa9aa7b11fb709971db3bd909a28&amp;w=940&amp;q=75"
+    },
+    {
+      "title_zh": "Lunar New Year Concert 2026 2026新春音乐会",
+      "title_en": "Lunar New Year Concert 2026",
+      "artist": "白凯南 Bai Kainan 等",
+      "category": "音乐会",
+      "city": "悉尼",
+      "venue": "Sydney Opera House Concert Hall 悉尼歌剧院音乐厅",
+      "date": "2027-02-21",
+      "time": null,
+      "recurrence": null,
+      "price": null,
+      "ticket_platform": "Sydney Opera House",
+      "ticket_url": "https://www.sydneyoperahouse.com/contemporary-music/lunar-new-year-concert-2026",
+      "status": "announced",
+      "source_url": "https://www.sydneyoperahouse.com/contemporary-music/lunar-new-year-concert-2026",
+      "verified": false,
+      "added": "2026-08-18",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://www.sydneyoperahouse.com/sites/default/files/styles/1200x630/public/collaborodam_assets/london-symphony-orchestra-credit-jay-patel.jpg"
     }
   ]
 }
