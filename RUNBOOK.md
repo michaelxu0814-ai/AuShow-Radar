@@ -37,3 +37,27 @@
   卡片 4 张(封面/套路识别/自保清单/CTA)，无配图——防骗选题不挂任何演出海报，规避
   "海报张冠李戴"红线；全篇不点名任何个人/账号/二手平台，只讲模式。
   本次会话按 daily-xhs-prompt.md 第0节未调用任何浏览器截图工具，渲染留给 render_card.py。
+
+- **2026-08-19** | 004号 | 场馆攻略(周三轮换位) | fact-audit 15条全GREEN，RED=0。
+  场馆选 Marvel Stadium(墨尔本 Docklands)——它是 verified 池里日期最近的体育场级演出
+  (周杰伦墨尔本站 2026-10-17)的场馆。本篇同样不消耗单场安利池：只引用了该条目的
+  日期+场馆两个字段作时间锚点，不复述票价/平台/限购。
+  15 条断言全部来自 marvelstadium.com.au 官网(WebFetch 全部抓取成功，无 403)：
+  getting-to-marvel-stadium(地址 740 Bourke St Docklands VIC 3008、Southern Cross 紧邻 +
+  Bourke St 人行天桥、电车 30/35/70/75/86 直达 vs 96/11/48 需步行、巴士总站、
+  Port Phillip Ferries 对街停靠、停车入口 A&B/D&E + 限高 2.1m)、conditions-of-entry
+  (包不得大于 A3 + 须放得进座位底下)、a-z-guide(cashless 无 ATM、禁专业相机/录音录像/
+  三脚架、禁罐装玻璃、旗杆 1.6m 上限、Gate 1/Gate 5 免费寄存位置)、faq(可自带食物与
+  非酒精饮料无玻璃、电子票提醒充电+调亮度)、about-the-stadium(可开合屋顶 8 分钟)。
+  **本次 fact-audit 拦下的问题(未进入文案)**：
+  ① 搜索摘要给的"步行 4 分钟"在官网正文核实不到 → 删掉，只写"就在隔壁/走天桥"；
+  ② 重入(pass out)政策官网两处自相矛盾(A-Z 页称可扫票离场再入场，Conditions of Entry
+     页称 "Pass outs will not be issued") → 无法判定，整条不写；
+  ③ 免费电车区是否覆盖球场：PTV 官方边界图 PDF 抓取失败(SSL 握手错误) → 不写；
+  ④ 视野/座位区推荐官网无依据、且演唱会舞台布局因场次而异 → 整块砍掉，
+     这是账号红线"凭印象编"的高风险区，宁可让攻略少一个卖点。
+  以上四项已在 `content/004-xhs-copy.md` 的"主动排除项"里写明，便于日后复查。
+  卡片 4 张(封面/怎么到/怎么进/CTA)，无配图。模板复制自 003 而非 001——003 是同模板
+  直系后代且已含 `.ledger-note` max-width 修正与无 frame-img 的纯文字版式，与本篇形态
+  一致；已 diff 确认 004 与 003 的第 1–830 行(全部 CSS/主题 token/字体)仅 <title> 不同。
+  本次会话按 daily-xhs-prompt.md 第0节未调用任何浏览器截图工具，渲染留给 render_card.py。
