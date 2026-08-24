@@ -86,3 +86,30 @@
   title 列只剩约 300px，故 ledger-title 一律压到 3–4 字(艺人名/短标签)，完整巡演名与
   场馆日期放进 note，避免 42px 标题在渲染时折行。
   本次会话按 daily-xhs-prompt.md 第0节未调用任何浏览器截图工具，渲染留给 render_card.py。
+
+- **2026-08-24** | 006号 | 单场演出安利(周一轮换位) | fact-audit 12条：12 GREEN，RED=0。
+  **本次 fact-audit 拦下了一个真实事实错误(这是 fact-audit 首次拦下 events.json 本身的
+  数据错误，而不只是文案措辞问题)**：
+  按"日期最近/热度最高"，本应安利 AKMU 墨尔本站(2026-09-18，未用过的 verified 条目里
+  最近的一场)。核实时发现该条目 `ticket_platform="Ticketek"` **已经过期失真**——
+  Margaret Court Arena 所属的 Melbourne Park 自 **2026-08-22**(即两天前)起改由 **AXS**
+  承接票务，官方场馆页并特别注明 "Ticketek ticket delivery for AKMU has been
+  intentionally delayed. Your tickets will be issued by AXS by the end of August"。
+  照 JSON 写"Ticketek 是唯一官方购票平台"会把读者导到已不承接该场的平台(RED)；改写成
+  AXS 又违反"必须与 events.json 逐字一致、不得使用 JSON 没有的字段"红线。两条路都堵死，
+  **该条目今天不可发**，已按第7步写入 `~/Projects/EXCEPTIONS.md` 等用户修数据。
+  次选 AKMU 悉尼站(09-20)同样弃用：price/time 均为 null、status=on_sale 与 notes
+  "票价截至2026-07-03未公布"自相矛盾(005 已记录过)、且场馆名存在歧义(JSON 记
+  "ICC Sydney Theatre"，Ticketek 现标为 "TikTok Entertainment Centre")——一张没票价、
+  没时间、场馆名与购票页对不上的票根卡，正撞账号"详情页跳错演出"的历史事故线。
+  最终改用 **Rolling Donkey 中文喜剧开放麦(悉尼，每周二)**：该条目每个字段(地址/19:30/
+  每周二/Eventbrite/在售/未标价)都被官方 Eventbrite 页独立佐证，零冲突字段。
+  额外好处是"每周二"为常驻周场，**任何一天发布都成立**，不存在"明晚就有"这类会因用户
+  手动审核延迟而失真的时效断言——文案里已刻意把 CTA 写成恒真的"每周二都有一场"。
+  卡片 4 张(封面/票根/去之前先看这4条/CTA)，无配图(该条目 image=null)。
+  票根大字位用「周二」两字替代 001 的日期数字(该条目 date=null)。
+  模板复制自 005，已 diff 确认第 1–840 行(全部 CSS/主题 token/字体)与 001 仅 <title> 不同。
+  本次会话按 daily-xhs-prompt.md 第0节未调用任何浏览器截图工具，渲染留给 render_card.py。
+  ⚠️ 组合治理提醒(见文末"给用户的话")：PORTFOLIO.md 最后评审停留在 2026-07-11(已超 14 天
+  心跳阈值)，且 AuShow 的杀死标准写着"若 08-24 后仍未实际发布，下次评审自动转判定"——
+  今天正是 08-24，这条时钟到点了。
