@@ -145,3 +145,39 @@
   ⚠️ 组合治理(连续第二天提醒，见文末)：PORTFOLIO.md 最后评审仍停在 2026-07-11(超 14 天
   心跳阈值)，且 AuShow 杀死标准里"若 08-24 后仍未实际发布，下次评审自动转判定"这条时钟
   **昨天已经到点**，今天是逾期第 1 天。
+
+### 2026-08-26(周三) — 第 008 篇 · 场馆攻略
+
+- **产出**：`content/008-xhs-copy.md` + `content/cards/008/index.html`(4 张 poster)。
+  标题「悉尼ENGIE球场，包别超过A4」(16 字)。
+- **选题**：周三轮换位=场馆攻略。场馆选 **ENGIE Stadium(Sydney Olympic Park)**,是 verified
+  条目「周杰伦「海洋 悉尼 嘉年华Ⅱ」世界巡回演唱会」(2026-11-21)的场馆。刻意避开 004 已
+  写过的 Marvel Stadium——ENGIE 是 verified 池里另一个体育场级场馆,且**入场规则与 Marvel
+  差异实质**(包限 A4 vs A3、旗帜限旗面 1m×1m vs 限旗杆 1.6m、业余拍照允许 vs 专业相机
+  一律禁带),对跨城看演出的受众有独立价值,不是换皮重写。
+- **fact-audit**：**RED=0,CHECKED=18,SOURCES-CITED=18,未发现需要改文案的事实错误。**
+  全部断言来自 sydneyshowground.com.au(官方场馆站:getting-here / engie-stadium-faqs /
+  conditions-of-entry)与 transportnsw.info(官方交通站),逐条留 URL + 原文引语。
+- **审计中处理掉的两处风险**(未构成 RED,但改了写法)：
+  1. **渡轮距离口径冲突**——三方站点称"渡轮就在球场旁",Transport NSW 官方页写的是
+     "around a 40 minute walk (3.6km)"。采信官方页,并用场馆官网"坐船来还得再转一趟巴士"
+     这句互证,最后把它写成一条**反向提醒**("千万别为了浪漫坐渡轮"),是本篇最实用的差异点。
+  2. **火车站步行 5 分钟**——搜索摘要有这个数字,但两次 WebFetch 官网 FAQ 页都没抓到原文,
+     判定不可靠,整条剔除,只保留官网原话 "on Sydney Showground's doorstep"。
+     (与 004 处理"步行 4 分钟"的做法一致:分钟数没有官方原文就不写。)
+- **主动排除 7 项**：视野/座位区推荐、步行分钟数、开门检票时间、寄存(官网只说 sporting
+  events 没有,演唱会未说明)、pass out 政策(官网只有 Inclosed Lands Act 的"被禁后非法
+  再入场",与普通中途离场无关,不能挪用)、凭票免费坐火车(出自 Sydney Thunder 球赛推广页,
+  非演唱会适用)、场馆容量/看台层数。详见 008 文末"主动排除项"。
+- **价格类断言处理**：停车费 $8/小时、$40/天封顶取自场馆官网 getting-here 页,但价格是
+  churn 最高的一类事实,文案里明确标注"场馆官网标价"并加"出发前再看一眼官网",不承诺
+  演唱会当晚同价(官网未按活动类型区分)。
+- 模板复制自 `cards/007/index.html`,`data-theme="aushow"`、主题色 token、字体、
+  `.ticket`/`.ledger`/`issue-strip` 全部原样保留,只改 4 个 poster 区块 + `<title>`。
+- 已确认 `render_card.py` 在计数前会剥掉 HTML 注释(`html_no_comments`),模板顶部那段
+  示例注释不会被算成 poster,脚本会正确识别为 4 张。
+- 本次会话按 `daily-xhs-prompt.md` 第 0 节,**未调用任何浏览器/截图工具**,渲染与 Telegram
+  推送留给 `run_daily_xhs.sh` → `render_card.py`。
+- ⚠️ **组合治理(连续第三天提醒)**：PORTFOLIO.md 最后评审仍停在 2026-07-11(超 14 天心跳
+  阈值)。AuShow 杀死标准"若 08-24 后仍未实际发布,下次评审自动转判定"**已逾期第 2 天**。
+  内容侧已积压 8 篇待发,瓶颈完全在人工发布这一步,不在生产线。建议尽快跑 /portfolio-review。

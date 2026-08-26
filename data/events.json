@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26",
+  "updated": "2026-08-27",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -2068,6 +2068,69 @@
       "link_ok": true,
       "link_note": null,
       "image": "https://imgcache.dealmoon.com/thumbimg.dealmoon.com/au2605/dealmoon/56d/121/6c7/af14eb59cbde90491fd37acx1080x1080x188.jpeg_480_0_3_770a.jpeg"
+    },
+    {
+      "title_zh": "候场邀约 |脱口秀拼盘《沪娘冲击》- 9.4周五悉尼站",
+      "title_en": null,
+      "artist": null,
+      "category": "脱口秀",
+      "city": "悉尼",
+      "venue": "Zenith Theatre and Convention Centre, Chatswood",
+      "date": "2026-09-04",
+      "time": "19:30-21:00",
+      "recurrence": null,
+      "price": "From AUD 58.00",
+      "ticket_platform": null,
+      "ticket_url": null,
+      "status": "on_sale",
+      "source_url": "https://stayhappening.com/e/%E5%80%99%E5%9C%BA%E9%82%80%E7%BA%A6-%E8%84%B1%E5%8F%A3%E7%A7%80%E6%8B%BC%E7%9B%98%E3%80%8A%E6%B2%AA%E5%A8%98%E5%86%B2%E5%87%BB%E3%80%8B-94%E5%91%A8%E4%BA%94%E6%82%89%E5%B0%BC%E7%AB%99-E118SB3IX3BCY",
+      "verified": false,
+      "added": "2026-08-27",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://cdn.stayhappening.com/events7/banners/215a46a265aa870fa2fb9b9a303ae2769e675360a32d32f8c306dacad0c7db9f-rimg-w1200-h743-dcf8f8f8-gmir.jpg?v=1786541588"
+    },
+    {
+      "title_zh": "YinYin乐队巡回演唱会 悉尼站",
+      "title_en": null,
+      "artist": "YinYin乐队",
+      "category": "演唱会",
+      "city": "悉尼",
+      "venue": "Factory Theatre",
+      "date": "2026-11-18",
+      "time": "19:00",
+      "recurrence": null,
+      "price": "￥5000起",
+      "ticket_platform": "有票网",
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://yanchupiaowu.com/yanchu/xhqyjzj.html",
+      "verified": false,
+      "added": "2026-08-27",
+      "link_ok": false,
+      "link_note": "页面不含艺人/演出名: ",
+      "image": null
+    },
+    {
+      "title_zh": "YinYin乐队巡回演唱会 墨尔本站",
+      "title_en": null,
+      "artist": "YinYin乐队",
+      "category": "演唱会",
+      "city": "墨尔本",
+      "venue": "Croxton Bandroom",
+      "date": "2026-11-22",
+      "time": "19:00",
+      "recurrence": null,
+      "price": "￥5000起",
+      "ticket_platform": "有票网",
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://yanchupiaowu.com/yanchu/xhqyjzj.html",
+      "verified": false,
+      "added": "2026-08-27",
+      "link_ok": false,
+      "link_note": "页面不含艺人/演出名: ",
+      "image": null
     }
   ]
 }
