@@ -181,3 +181,44 @@
 - ⚠️ **组合治理(连续第三天提醒)**：PORTFOLIO.md 最后评审仍停在 2026-07-11(超 14 天心跳
   阈值)。AuShow 杀死标准"若 08-24 后仍未实际发布,下次评审自动转判定"**已逾期第 2 天**。
   内容侧已积压 8 篇待发,瓶颈完全在人工发布这一步,不在生产线。建议尽快跑 /portfolio-review。
+
+### 2026-08-27(周四) — 第 009 篇 · 本周开票汇总
+
+- **产出**：`content/009-xhs-copy.md` + `content/cards/009/index.html`(4 张 poster)。
+  标题「周杰伦要等10月，这两场不用等」(14 字)。
+- **选题**：周四轮换位=本周开票汇总。收 4 场 verified 条目：周杰伦墨尔本(10-17)、
+  周杰伦悉尼(11-21)、Rolling Donkey 开放麦(悉尼,每周二)、候场喜剧 Loadingzone(墨尔本,常驻)。
+- **可用池子本周缩水**：袁娅维两场(08-20 / 08-22)演出日期均已早于今天，整组过期剔除
+  (005 当时只需剔墨尔本站)；AKMU 两场仍卡在 EXCEPTIONS OPEN。剩下的 4 条天然分成
+  "体育场大场"与"常驻开放麦"两类，本篇就按这个对比写，**不是 005 时间线的换皮重排**。
+- **fact-audit**：**RED=0,CHECKED=25,SOURCES-CITED=25,未发现需要改文案的事实错误。**
+- **本篇加做了外部复核(新做法)**：AKMU 那次事故证明 verified 条目也会过期失真，所以
+  4 条全部另做一次外部核对，逐条留 URL——
+  - 周杰伦两站：discover.ticketmaster.com.au 汇总页复核日期/场馆/在售状态/限购 6 张
+    ("You may purchase a maximum of 6 tickets per person")；marvelstadium.com.au 复核
+    墨尔本站 "Saturday, 17 October 2026" + "7:30 PM"。两站日期经计算均为**周六**,写进了文案。
+  - Rolling Donkey：Eventbrite 页当前 live,原文 "每周二"、"7:30 PM"、
+    "87-91 Abercrombie Street, Chippendale, NSW 2008",与 JSON 三个字段逐一吻合。
+  - Loadingzone：主办方 Eventbrite 页当前标题为 "4 Upcoming Activities",证实"常驻"
+    这一说法当下仍成立(首次 WebFetch 只抓到导航、误报"无场次",经搜索结果标题纠正)。
+- **审计中剔掉的一处冲突**：Loadingzone 条目 `time="19:00"`,但 clubvoltaire.com.au 该厂牌
+  场次页写 "7:30 pm – 9:30 pm",两数字冲突且无法判定哪个适用于当前场次 → **整条不写开场
+  时间**,文案改为"以 Eventbrite 页面为准"。沿用 008 "没有官方原文就不写"的既定做法。
+- **沿用 005 的口径**：不说"本周开票"(4 条 status 均为 on_sale=已在售,无字段支持"本周
+  开售"),卡面统一用"本周在售/现在都能买"。
+- **主动排除**：两场开放麦的票价与具体日期(price/date=null)、周杰伦主办方、座位视野、
+  开门检票时间、退改签、余票量。详见 009 文末"主动排除项"。
+- 模板复制自 `cards/008/index.html`,已 `diff` 确认第 1–840 行(`<head>`+CSS)除 `<title>`
+  外与 008 完全一致,`data-theme="aushow"`、主题色 token、字体、`.ticket`/`.ledger`/
+  `issue-strip` 全部原样保留,只改 4 个 poster 区块 + `<title>`。
+- 已按 `render_card.py` 的 `html_no_comments` 逻辑验证:剥掉注释后恰好 4 个
+  `<section class="poster xhs">`(id `xhs-01`…`xhs-04`),模板顶部示例注释不会被误计。
+- 本次会话按 `daily-xhs-prompt.md` 第 0 节,**未调用任何浏览器/截图工具**,渲染与 Telegram
+  推送留给 `run_daily_xhs.sh` → `render_card.py`。
+- ⚠️ **组合治理(连续第四天提醒)**：PORTFOLIO.md 最后评审仍停在 2026-07-11(超 14 天心跳
+  阈值)。AuShow 杀死标准"若 08-24 后仍未实际发布,下次评审自动转判定"**已逾期第 3 天**。
+  内容侧已积压 9 篇待发,瓶颈完全在人工发布这一步,不在生产线。建议尽快跑 /portfolio-review。
+- ⚠️ **verified 池子告急**：8 条 verified 里,袁娅维 2 条已过期、AKMU 2 条卡在 EXCEPTIONS,
+  实际可用只剩 4 条(周杰伦 2 + 开放麦 2),且周杰伦两场已被 001/002 单场安利过。
+  下一个"单场演出安利"轮换位(周五,即明天 08-28)会直接撞上这个空池。**建议优先处理
+  EXCEPTIONS 里 AKMU 两条(修 ticket_platform/补 price)**,那是最快把池子从 4 补回 6 的动作。

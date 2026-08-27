@@ -14,3 +14,4 @@
 | 2026-08-24(生成) | 006 | 单场演出安利 | Rolling Donkey 中文喜剧开放麦(悉尼,每周二) —— **首选 AKMU 墨尔本站(09-18)经 fact-audit 判定 RED 后弃用**(ticket_platform=Ticketek 已失真,Melbourne Park 自 08-22 改由 AXS 承接;详见 EXCEPTIONS.md);AKMU 悉尼站(09-20)因 price/time=null + status 与 notes 冲突 + 场馆名歧义一并暂缓。两条 AKMU 仍留在未安利池,待用户修 events.json |
 | 2026-08-25(生成) | 007 | 转票防骗指南 | — (不依赖 verified 演出，未消耗池子；本篇为"假售票网站/未授权转售站"角度，与 003 的"人对人私下转票"角度零重叠) |
 | 2026-08-26(生成) | 008 | 场馆攻略 | — (场馆攻略，不消耗单场安利池；文中仅以 verified 条目「周杰伦「海洋 悉尼 嘉年华Ⅱ」世界巡回演唱会」2026-11-21 / ENGIE Stadium (Sydney Olympic Park) 作为时间锚点，该场已于 002 安利过。场馆选 ENGIE 而非重复 004 的 Marvel Stadium) |
+| 2026-08-27(生成) | 009 | 本周开票汇总 | 周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会(10-17) / 周杰伦「海洋 悉尼 嘉年华Ⅱ」世界巡回演唱会(11-21) / Rolling Donkey 中文喜剧开放麦(悉尼,每周二) / 候场喜剧 Loadingzone Comedy 开放麦(墨尔本,常驻) —— 汇总篇，不消耗"单场安利"未用池。袁娅维两场(08-20/08-22)演出日均早于今天，已过期剔除；AKMU 两场仍在 EXCEPTIONS OPEN(墨尔本站 ticket_platform 失真、悉尼站字段冲突)，继续不收。角度为"要提前锁的大场 vs 不用等的常驻开放麦"，与 005 的纯演唱会时间线不重叠 |
