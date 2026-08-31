@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-31",
+  "updated": "2026-09-01",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -2152,6 +2152,27 @@
       "link_ok": true,
       "link_note": null,
       "image": "https://nationaltheatre.org.au/wp-content/uploads/2026/05/豆豆海外墨尔本_Website-image-1080x1080-1-1024x1024.png"
+    },
+    {
+      "title_zh": "国家话剧院《四世同堂》",
+      "title_en": null,
+      "artist": "秦海璐、田雨",
+      "category": "话剧",
+      "city": "悉尼",
+      "venue": "Pyrmont, NSW",
+      "date": "2026-04-16",
+      "time": "7:00pm",
+      "recurrence": null,
+      "price": "$80.33-$233.26",
+      "ticket_platform": null,
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://www.dealmoon.com.au/774197.html",
+      "verified": false,
+      "added": "2026-09-01",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://imgcache.dealmoon.com/thumbimg.dealmoon.com/us2601/dealmoon/989/669/78a/3ea7df2c8e0264e23885551x897x897x174.jpeg_480_0_3_f271.jpeg"
     }
   ]
 }
