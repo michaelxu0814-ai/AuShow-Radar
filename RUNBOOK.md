@@ -272,3 +272,53 @@
   **明天(08-30 周日)轮换位=转票防骗指南，不依赖 verified 池，可正常产出**；但下周一
   (08-31)的"单场演出安利"会再次撞空池，届时只能按 prompt 第 2 步换角度重讲最久没安利过
   的那条(周杰伦墨尔本站，001 用过)。补池最快动作仍是修 AKMU 两条。
+
+## 2026-09-01(周二) — 第 013 篇
+
+- **选题类型**：转票防骗指南(周二轮换位)。不依赖 verified 池，本次未消耗任何演出条目。
+- **fact-audit 结果**：RED=0，CHECKED=15，SOURCES-CITED=15，全部 GREEN，无需改稿。
+  15 条中 5 条来自 NAB PayID 诈骗页(WebFetch 直接抓取成功)、3 条来自 Scamwatch
+  buying-and-selling-scams 页(WebFetch 直接抓取成功)、3 条来自 Scamwatch overpayment-scams
+  页(该 URL 直接 WebFetch 被重定向到 buying-and-selling 页，改用 WebSearch 对该官方 URL 做
+  **两次独立正文抽取、结果一致**后才采信)、4 条来自 Ticketek Marketplace 帮助页与 Seller
+  FAQs(两个 URL 直接 WebFetch 均 403，沿用 003/007 已确立的 WebSearch 抽取取证方式)。
+- **角度选择(本篇是同选题第 4 篇，重复风险最高的一次)**：动手前先 grep 了 003/007/012 的
+  关键词分布，确认 012 已把 chargeback/拒付写透(出现 14 次)、003 已用掉"新条码/原票作废/
+  票面价上限"、007 已用掉"官方转售分场次不分平台"。因此**整体换到卖家视角**——前三篇主角
+  全是买家，"你多出一张票要出手反被骗"这一半在账号里从未写过。三个套路(冒用 PayID 商家
+  账户、多付退差额、不看货就买+要你替转钱)与前三篇零重叠。
+- **主动剔除**：媒体转述的被骗金额统计(2023 年口径，非 Scamwatch 官方页原文，且 012 已
+  声明不复用损失数字)；Scamwatch 那句 "make sure the name matches the person you think
+  you're paying"——**原文主语是付款方，属买家视角，套到卖家身上会曲解官方口径，整句不写**；
+  其他二级平台的卖家费率与结款细节(未核到官方原文)。详见 013 文末"主动剔除项"。
+- **红线处理**：PayID 本身没有问题，全篇统一写"冒用 PayID 名义"，不写成"PayID 不安全"；
+  不点名任何个人/账号/二级转售站。
+- 卡片数 4 张，模板复制自 `cards/011/index.html`，已 `diff` 确认第 1–836 行(`<head>`+CSS)
+  除 `<title>` 外与 `cards/001/index.html` 完全一致，`</main>` 之后的脚本块与 011 逐字节相同；
+  `data-theme="aushow"`、主题色 token、字体、`.ticket`/`.ledger`/`issue-strip` 原样保留。
+- 已按 `render_card.py` 第 87–88 行的 `html_no_comments` 逻辑实跑验证：剥掉注释后恰好 4 个
+  `<section class="poster xhs">`(id `xhs-01`…`xhs-04`)，section 开闭配平，模板顶部示例注释
+  未被误计。另已实跑 `run_daily_xhs.sh` 第 55–62 行的关卡条件，判定 PASS。
+- 本次会话按 `daily-xhs-prompt.md` 第 0 节，**未调用任何浏览器/截图工具**，渲染与 Telegram
+  推送留给 `run_daily_xhs.sh` → `render_card.py`。
+- 🔴 **发现前两天的运行都被 Claude 月度额度上限打断(已写入 EXCEPTIONS OPEN)**：查
+  `automation/logs/2026-08-30.log` 与 `2026-08-31.log`，两天都是同一条根因——
+  `You've hit your monthly spend limit … your session limit resets …` → `FAILED: claude 非零退出`。
+  - 08-30 断在第 5 步之后：`content/012-xhs-copy.md` 已完整写出(fact-audit RED=0 CHECKED=12，
+    文案可用)，但脚本随即判定 `FAILED: 找不到 content/cards/012/index.html,claude 写完文案
+    但没建卡片 HTML`；`git log --all -- 'content/cards/012*'` 全历史无记录，确认该 HTML
+    **从未存在**，即 012 从未出图、从未推送。今天已补记 posted-log 的 012 行。
+  - 08-31(周一，轮换表=单场演出安利)断得更早：`FAILED: 没有产出新的 NNN-xhs-copy.md 文件`，
+    整篇缺失。连同 012 一起，**过去 3 天实际只完成了今天这 1 篇**。
+  - **脚本的失败检测本身是正常工作的**，日志里两条 `FAILED:` 都写得很清楚；漏掉的是这些
+    失败没有推到 Telegram，也没人翻日志，所以静默积压了两天。建议把 `run_daily_xhs.sh`
+    的 `FAILED:` 分支也推一条 Telegram，让失败和成功一样能被看见。
+- ⚠️ **组合治理(连续第七天提醒)**：PORTFOLIO.md 最后评审仍停在 2026-07-11(超 14 天心跳
+  阈值)。AuShow 杀死标准"若 08-24 后仍未实际发布，下次评审自动转判定"**已逾期第 8 天**。
+  内容侧已积压 12 篇待发(001–013 中除 012 缺图外均已成稿)，瓶颈完全在人工发布这一步。
+  建议尽快跑 /portfolio-review。
+- ⚠️ **verified 池子现状(与上次一致，未改善)**：今天 `data/events.json` 新增了 1 条
+  「国家话剧院《四世同堂》」(悉尼，2026-04-16)，但 `verified=false`、`status=tbc`、
+  `ticket_platform` 与 `ticket_url` 均为 null，**不可用**。8 条 verified 中可用仍只有 4 条
+  (周杰伦 2 + 开放麦 2)，且全部已被单场安利过；EXCEPTIONS 里 AKMU 两条仍未修。
+  **明天(09-02 周三)轮换位=场馆攻略，不依赖 verified 池，可正常产出。**
