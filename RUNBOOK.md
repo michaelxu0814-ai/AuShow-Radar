@@ -322,3 +322,42 @@
   `ticket_platform` 与 `ticket_url` 均为 null，**不可用**。8 条 verified 中可用仍只有 4 条
   (周杰伦 2 + 开放麦 2)，且全部已被单场安利过；EXCEPTIONS 里 AKMU 两条仍未修。
   **明天(09-02 周三)轮换位=场馆攻略，不依赖 verified 池，可正常产出。**
+
+## 2026-09-03(周四) 值班日志
+
+- ✅ **今天发第 14 篇：`014-xhs-copy.md`，选题类型=本周开票汇总**(周四轮换位)。
+  4 张卡：封面 / 人在悉尼 / 人在墨尔本 / 收尾 CTA。`content/cards/014/index.html` 已建
+  (复制自 009，同栏目同版式)，主题色 token、`.ticket`/`.ledger`/`issue-strip` 组件样式
+  原样保留，仅替换 4 个 poster 区块文案 + `<title>`。渲染留给 `render_card.py`。
+- ✅ **fact-audit：RED=0 CHECKED=26 SOURCES-CITED=26**。4 条演出全部另做外部复核，
+  重点复核了**周杰伦两场是否仍由 Ticketmaster 承接**(AKMU 就是栽在 `ticket_platform`
+  随场馆换票务商而失真)——Ticketmaster 官方巡演页今日仍列这两场、墨尔本场标
+  "On Sale Now!"，未发现换票务商迹象。票价区间两场也都拿到了外部票档佐证
+  (悉尼 188–748、墨尔本 208–748 +$9.90 手续费)。
+- ⚠️ **审计查出 1 处 events.json 字段已过期，本篇已绕开**：Loadingzone 条目 `notes` 写的是
+  "双语喜剧厂牌"，但今日 Eventbrite 主办方页原文是"澳洲**华语**文化厂牌"、Club Voltaire
+  场次页是 "the only **Mandarin Speaking** Comedy club in Melbourne"，两处一手信源口径
+  都不是"双语"(009 当时引的那句"专业双语喜剧厂牌"该页已改版)。文案已改写为"华语喜剧
+  厂牌"，只保留两处信源共同支持的表述。**请同步修 `data/events.json` 的 notes 字段**，
+  已写入 EXCEPTIONS OPEN。
+- ⚠️ **可用池与 009 完全相同，本篇靠角度避免重复**：袁娅维两场早已过期、AKMU 两场仍在
+  EXCEPTIONS OPEN 且 `data/events.json` 截至今日未修改，剩下的仍是周杰伦 2 + 开放麦 2。
+  本篇改按**城市**切分(悉尼 2 场 / 墨尔本 2 场，每城一大一小)，与 005 的时间线、009 的
+  "大场 vs 常驻"两种切分都不重叠，并首次点明"两场大的都不在布里斯班"这一老粉实际处境。
+  **但这个办法有次数上限**——同一个 4 条池子已经连出 3 篇汇总，再来一次很难不重复。
+- 🔴 **昨天(09-02 周三，轮换位=场馆攻略)整篇缺失，且又是静默失败**。
+  `automation/logs/2026-09-02.log` 里写得很明确：`Failed to authenticate: OAuth session
+  expired and could not be refreshed` → `FAILED: claude 非零退出` → `FAILED: 没有产出新的
+  NNN-xhs-copy.md 文件`。**这是继 08-30/08-31 的额度耗尽之后，5 天内第 3 次静默失败**，
+  这次换了个根因(OAuth 过期，不是额度)。`run_daily_xhs.sh` 的 `FAILED:` 分支仍然不推
+  Telegram —— 8 月 31 日 RUNBOOK 里已经提过这条建议，至今未改，所以昨天又白丢一天没人知道。
+  需要的动作：①重新登录/续期 Claude OAuth；②**把 `FAILED:` 分支也推一条 Telegram**
+  (这条再不做，后面每次失败还是要靠人翻日志才发现)。
+- ⚠️ **AKMU 两场进入最后窗口**：09-18(墨尔本)距今只剩 15 天、09-20(悉尼)只剩 17 天。
+  两条从 08-24 挂到现在没修，再拖就会像袁娅维那两场一样直接过期作废，白白浪费 2 条
+  verified 条目。修法在 EXCEPTIONS 里写得很具体(墨尔本站 `ticket_platform` 改 AXS 并换
+  `ticket_url`；悉尼站场馆名改成购票页当前口径、补 `price`/`time`)。
+- ⚠️ **组合治理(连续第八天提醒)**：PORTFOLIO.md 最后评审仍停在 2026-07-11(超 14 天心跳
+  阈值)。AuShow 杀死标准"若 08-24 后仍未实际发布，下次评审自动转判定"**已逾期第 10 天**。
+  内容侧积压 13 篇待发(001–014 中除 012 缺卡片 HTML 外均已成稿)，瓶颈完全在人工发布这一步。
+  建议尽快跑 /portfolio-review。
