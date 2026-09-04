@@ -361,3 +361,38 @@
   阈值)。AuShow 杀死标准"若 08-24 后仍未实际发布，下次评审自动转判定"**已逾期第 10 天**。
   内容侧积压 13 篇待发(001–014 中除 012 缺卡片 HTML 外均已成稿)，瓶颈完全在人工发布这一步。
   建议尽快跑 /portfolio-review。
+
+## 2026-09-04(周五) 值班日志
+
+- ✅ 第 **015** 篇已成稿：`content/015-xhs-copy.md` + `content/cards/015/index.html`(4 张
+  `poster xhs`，`data-theme="aushow"` 主题色 token 与 `.ticket`/`.ledger`/`issue-strip`
+  组件样式原样保留，head/CSS 与 tail 逐行比对与 001 一致，仅 `<title>` 和四个 poster
+  区块内文案不同)。渲染按提示词第 0 步交给 `render_card.py`，本次会话未调用任何截图工具。
+- 选题类型：**单场演出安利**(周五轮换位)。fact-audit：**RED=0 CHECKED=13 SOURCES-CITED=13**，
+  未发现需要改文案的问题。
+- 🔴 **未安利池仍然是空的，本篇是第一次触发"换角度重讲"分支**。8 条 verified 里：周杰伦
+  墨/悉已由 001/002 用过、Rolling Donkey 由 006、Loadingzone 由 010；袁娅维两场演出日已过；
+  AKMU 两场仍不可发。按提示词第 2 步取四条已用条目里最早的一条(001，约 19 天前)=周杰伦
+  墨尔本站，角度换成**距开演 43 天的倒计时**，落点在 001 只当 bullet 列过的「限购 6 张」
+  和「$208–$748 价位跨度」上，避开 004 已写透的 Marvel Stadium 场馆攻略。
+- ✅ **本次做了 events.json 之外的独立复核**(该条目 `verified` 打于 07-03，已隔 2 个月，
+  且有 AKMU 字段失真的前车之鉴)：Ticketmaster 官方页今日仍标 "On Sale Now!"、
+  "a maximum of 6 tickets per person"、"organised by Sky Music and Horizon Production"；
+  Marvel Stadium 官方页为 "17 October 2026 (Saturday)" / "7:30 PM" / "Marvel Stadium
+  (Melbourne)"。日期/时间/场馆/状态/限购/主办方**六项全部与 JSON 一致，无失真**。
+- ⚠️ 唯一没拿到第二信源的字段是**票价 $208–$748(+$9.90)**——今日 Ticketmaster 汇总页与
+  Marvel Stadium 官方页都不展示票价。判 GREEN 的依据是 events.json 的 verified 字段本身
+  (001 用的同一值)，且**未发现任何相反证据**；卡片保留"下单前建议官网复核"提示。
+- ⚠️ 注意一处口径差：官方页写的是"每人最多 6 张"，events.json notes 写的是"每账户限购6张"。
+  上限同为 6，文案取 JSON 逐字表述；也正因为两者有差异，本篇**刻意不给"拆两个账号下单"
+  之类的操作建议**(可能触及购票条款)。
+- 🔴 **AKMU 墨尔本站(09-18)只剩 14 天，悉尼站(09-20)只剩 16 天**——从 08-24 挂到今天已 11 天，
+  `data/events.json` 相关字段仍未改动。再拖两周就会像袁娅维那两场一样直接过期作废，
+  verified 池永久少 2 条，而这是目前唯一的增量来源。修法见 EXCEPTIONS。
+- 🔴 **`run_daily_xhs.sh` 的 `FAILED:` 分支至今仍不推 Telegram** —— 这条建议 08-31 提过、
+  09-03 又提过，5 天内 3 次静默失败(08-30/08-31 额度、09-02 OAuth)都是靠人翻日志才发现的。
+  这是整条流水线目前最便宜也最该做的一个改动。
+- ⚠️ **组合治理(连续第九天提醒)**：PORTFOLIO.md 最后评审仍停在 2026-07-11(超 14 天心跳阈值)。
+  AuShow 杀死标准"若 08-24 后仍未实际发布，下次评审自动转判定"**已逾期第 11 天**。内容侧
+  现积压 14 篇待发(001–015 中除 012 缺卡片 HTML 外均已成稿)，瓶颈完全在人工发布这一步。
+  建议尽快跑 /portfolio-review。

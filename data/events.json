@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04",
+  "updated": "2026-09-05",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -2173,6 +2173,48 @@
       "link_ok": true,
       "link_note": null,
       "image": "https://imgcache.dealmoon.com/thumbimg.dealmoon.com/us2601/dealmoon/989/669/78a/3ea7df2c8e0264e23885551x897x897x174.jpeg_480_0_3_f271.jpeg"
+    },
+    {
+      "title_zh": null,
+      "title_en": "The Rose - ROSETOPIA",
+      "artist": "The Rose",
+      "category": "演唱会",
+      "city": "墨尔本",
+      "venue": "Festival Hall",
+      "date": "2026-10-09",
+      "time": null,
+      "recurrence": null,
+      "price": "$149 - $469",
+      "ticket_platform": "AusTickets",
+      "ticket_url": "https://m.austickets.com.au/tickets/1acdb9fe-26db-4116-bfff-779ddbfcd985",
+      "status": "on_sale",
+      "source_url": "https://m.austickets.com.au/tickets",
+      "verified": false,
+      "added": "2026-09-05",
+      "link_ok": false,
+      "link_note": "页面不含艺人/演出名: AusTickets - 致力于打造全澳最实时，方便，快捷的华人票务销售网络平台",
+      "image": null
+    },
+    {
+      "title_zh": null,
+      "title_en": "The Rose - ROSETOPIA",
+      "artist": "The Rose",
+      "category": "演唱会",
+      "city": "悉尼",
+      "venue": "Hordern Pavilion",
+      "date": "2026-10-11",
+      "time": null,
+      "recurrence": null,
+      "price": "$149 - $469",
+      "ticket_platform": "AusTickets",
+      "ticket_url": "https://m.austickets.com.au/tickets/1acdb9fe-26db-4116-bfff-779ddbfcd985",
+      "status": "on_sale",
+      "source_url": "https://m.austickets.com.au/tickets",
+      "verified": false,
+      "added": "2026-09-05",
+      "link_ok": true,
+      "link_note": null,
+      "image": null
     }
   ]
 }
