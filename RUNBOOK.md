@@ -396,3 +396,41 @@
   AuShow 杀死标准"若 08-24 后仍未实际发布，下次评审自动转判定"**已逾期第 11 天**。内容侧
   现积压 14 篇待发(001–015 中除 012 缺卡片 HTML 外均已成稿)，瓶颈完全在人工发布这一步。
   建议尽快跑 /portfolio-review。
+
+## 2026-09-05(周六) 值班日志
+
+- ✅ 第 **016** 篇已成稿：`content/016-xhs-copy.md` + `content/cards/016/index.html`(**5 张**
+  `poster xhs`，id `xhs-01`…`xhs-05` 连续)。HTML 由 `cards/001/index.html` 复制而来，
+  `<html data-theme="aushow">` 与顶部主题色 token、整体 CSS、字体、`.ticket`/`.ledger`/
+  `issue-strip` 组件样式**原样保留**——已逐行 diff 确认：第 1–853 行与 001 唯一差异是
+  `<title>`，尾部 33 行完全一致。渲染按提示词第 0 步交给 `render_card.py`，本次会话
+  **未调用任何浏览器/截图工具**。
+- 选题类型：**场馆攻略**(周六轮换位)。fact-audit：**RED=0 CHECKED=20 SOURCES-CITED=20**，
+  未发现需要改文案的问题。
+- 场馆选 **Margaret Court Arena**(Melbourne Park)——verified 池里日期最近的一场
+  (AKMU 墨尔本站 2026-09-18，距今 13 天)的场馆，也是**第一个中型室内 arena**：
+  004=Marvel Stadium、008=ENGIE Stadium 是露天大球场，011=Chippo Hotel 是酒吧地下室。
+- 🆕 **本篇角度是四篇场馆攻略里第一次以"票务"为主角**，不是又一篇"包能带多大"。
+  Melbourne Park 自 2026-08-22 起把官方票务伙伴换成 AXS，过渡期未完，官网原话是
+  "你的票由 AXS 还是 Ticketek 提供，取决于你看的是哪场"；AKMU 这场的官方活动页已明写
+  "Ticketek ticket purchases for AKMU have been issued by AXS"，且 ticketing 页保证
+  旧订单"仍然有效、座位分配不受影响"。对手里已经有票的读者，这比入场规则要紧得多，
+  而且天然接得上账号的防诈支线(官网自己点名了一串未授权转售站，本文按红线**不复读站名**，
+  只给"不是场馆认的那两个出票系统就没人兜底"这个判断标准)。
+- ⚠️ **红线处理**：AKMU 墨尔本站自 08-24 起就挂在 EXCEPTIONS OPEN(`ticket_platform=Ticketek`
+  与官方 AXS 口径冲突、`price`/`time` 为 null)，**本篇因此只用它的"日期+场馆"两个字段**
+  作时间锚点，不写票价、不写开演时间(官网有 7:00pm，但 JSON `time=null`，按红线不补)、
+  **不给任何购票入口指引**。文中写的是"已买的票由谁出票"这一官网已公布的事实，与
+  "去哪买票"是两件事，doc 里已单列说明。该条目**未被消耗**，仍留在未安利池。
+- 🔴 **AKMU 墨尔本站(09-18)只剩 13 天、悉尼站(09-20)只剩 15 天**，从 08-24 挂到今天已 12 天，
+  `data/events.json` 仍未改动。今天写这篇时又拿到一条更硬的证据：场馆官方活动页现在
+  直接写着 AKMU 的 Ticketek 票已由 AXS 出票，即 JSON 里的 `ticket_platform` 与
+  `ticket_url`(premier.ticketek.com.au 深链)**已确定是错的**，不是"存疑"。再拖两周这两条
+  就会像袁娅维那两场一样过期作废，verified 池永久少 2 条。已追加到 EXCEPTIONS OPEN。
+- 🔴 **`run_daily_xhs.sh` 的 `FAILED:` 分支至今仍不推 Telegram** —— 08-31、09-03、09-04
+  已连提三次。5 天内 3 次静默失败(08-30/08-31 额度、09-02 OAuth)全靠人翻日志才发现。
+  仍是整条流水线目前最便宜、性价比最高的一个改动。
+- ⚠️ **组合治理(连续第十天提醒)**：PORTFOLIO.md 最后评审仍停在 2026-07-11(超 14 天心跳
+  阈值)。AuShow 杀死标准"若 08-24 后仍未实际发布，下次评审自动转判定"**已逾期第 12 天**。
+  内容侧现积压 15 篇待发(001–016 中除 012 缺卡片 HTML 外均已成稿)，瓶颈完全在人工发布
+  这一步——内容产能不是问题，已经连着两周每天出稿。建议尽快跑 /portfolio-review。
