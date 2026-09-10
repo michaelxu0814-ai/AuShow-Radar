@@ -552,3 +552,42 @@
   (时钟从 08-16 起算，2026-11-08 到期；PORTFOLIO.md 最后评审 2026-09-06，节律内)。
   内容侧已积压 001–019 共 19 篇待发，**瓶颈仍全在人工发布这一步**——"每周发 3 篇"是硬前提，
   不达标会被判执行失败、不算市场证伪。
+
+## 值班日志 — 2026-09-09（周三）
+
+- 今天生成 **第 020 篇**，选题类型 **场馆攻略**（周三轮换位）。
+- 场馆取 verified 条目「AKMU 乐童音乐家 澳洲演唱会 悉尼站」（2026-09-20，距今 11 天，
+  verified 池里日期最近的一场）的场馆。本篇**只用该条目的日期+场馆两个字段**，不写票价、
+  不写开演/入场时间（JSON 中 `price`/`time` 均为 `null`，场馆官方活动页也未公布 doors/
+  show time），因此**不消耗单场安利池**，该条目仍可在字段修复后另行安利。
+- 品类与角度均为首次：004=Marvel Stadium、008=ENGIE Stadium（露天大球场）、011=Chippo
+  Hotel（酒吧地下室）、016=Margaret Court Arena（中型室内 arena）；本篇是**第一座"开在
+  会展中心里的剧院"**，也是**第一座悉尼室内场馆**。主角是**场馆改名**（events.json 仍写
+  旧名 `ICC Sydney Theatre`；官方 FAQ：2025-11-25 正式更名 TikTok Entertainment Centre），
+  与 016 的"票务伙伴换了"不重叠。
+- **fact-audit 结果：RED=0，CHECKED=31，SOURCES-CITED=31**，无需改稿。31 条断言全部落在
+  `tiktokentcent.com`（场馆官方站：event / getting-here / conditions-of-entry /
+  general-admission / faq）与 `iccsydney.com.au`（运营方官方新闻页）六个页面，逐条留 URL。
+  本次抓取**未出现 403/超时**（对比 017 的 Ticketek 帮助中心、019 的 Ticketmaster 帮助中心
+  当日均 403）。
+- **本次核实顺带解掉 AKMU 悉尼站的一个卡点**：该条目 `ticket_platform=Ticketek`
+  **与场馆官方口径一致**——官方 FAQ 原文 "Ticketek is the only authorised ticket seller
+  for entertainment events held at TikTok Entertainment Centre."，官方活动页 BOOK TICKETS
+  指向 `premier.ticketek.com.au`。这与 016 处理的**墨尔本站**（`ticket_platform=Ticketek`
+  与场馆官方 AXS 口径冲突）是两回事，请勿混为一谈。悉尼站现在只剩两个卡点：
+  `price`/`time` 仍为 `null`、`venue` 写的是旧名。已写入 EXCEPTIONS OPEN 供用户修。
+- 主动剔除、未进文案的内容：二手票务站标的 "Sold Out"（瞬时标签 + 非一手信源，沿用 018
+  对 "Low Availability" 的处理）；"去哪买票"的购买指引（价格与时间仍 null，给指引会诱导
+  读者去补一个本篇没核实的信息，因此只写"谁是授权售票方"这条场馆规则）；未授权转售渠道
+  的具体名称（账号红线）；冠名交易的商业细节与营销数字；停车价格（官网未给）；视野推荐
+  （官网无）；再入场 pass out 规则（本场馆官网未涉及，不照搬 016 的 Margaret Court Arena）。
+- 按提示词第 0 步，本次会话**未调用任何截图/浏览器工具**，渲染交由 `run_daily_xhs.sh` →
+  `automation/render_card.py` 完成。
+- ⚠️ 仍未解除的上游问题：**AKMU 墨尔本站演出日 09-18 只剩 9 天、悉尼站 09-20 只剩 11 天**，
+  `data/events.json` 相关字段自 08-24 挂出至今 **16 天**未修。再不修这两条会像袁娅维两场
+  那样直接过期作废，verified 池将永久少 2 条（8 条中的 2 条）。`content/cards/012/` 卡片
+  HTML 仍缺失。
+- ⚠️ 组合层提醒：AuShow 杀死标准为 **12 周净新增 500 小红书粉丝 + 每周至少实际发布 3 篇**
+  （时钟从 08-16 起算，2026-11-08 到期；PORTFOLIO.md 最后评审 2026-09-06，在 14 天节律内，
+  本次不触发评审提醒）。内容侧已积压 **001–020 共 20 篇待发，瓶颈仍全在人工发布这一步**
+  ——"每周发 3 篇"是硬前提，不达标会被判执行失败、不算市场证伪。
