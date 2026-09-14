@@ -54,7 +54,11 @@ def tokens(e: dict) -> list[str]:
     toks = re.findall(r"[一-鿿]{2,}|[A-Za-z]{3,}", blob)
     stop = {"演唱会", "巡回", "巡演", "世界", "澳洲", "澳大利亚", "悉尼", "墨尔本", "珀斯",
             "布里斯班", "音乐会", "脱口秀", "开放麦", "见面会", "粉丝", "专场", "Tour",
-            "World", "Live", "Concert", "站"}
+            "World", "Live", "Concert", "站",
+            # 本地活动线的通用词: 单独出现时没有区分度,留着会把任意页面判成"匹配"
+            "活动", "市集", "夜市", "美食", "亲子", "遛娃", "周末", "免费", "展览", "节日",
+            "黄金海岸", "阳光海岸", "昆士兰", "工作坊", "烟火", "Market", "Markets",
+            "Festival", "Free", "Kids", "Family", "Event", "Events", "Brisbane", "Weekend"}
     return [t for t in toks if t not in stop][:6]
 
 
@@ -79,6 +83,13 @@ def main():
             bad += 1
             print(f"✗ {name} | 无链接")
             continue
+        toks = tokens(e)
+        if not toks:
+            # 标题全是通用词(常见于本地活动),没有可校验的关键词 -> 不判死刑,交人工审核
+            e["link_ok"] = None
+            e["link_note"] = None
+            print(f"? {name} | 无可校验关键词,留给人工审核")
+            continue
         title = page_title(url)
         checked += 1
         if title is None:
@@ -86,7 +97,6 @@ def main():
             e.pop("link_note", None)
             print(f"? {name} | 页面抓取失败,待重试")
             continue
-        toks = tokens(e)
         hit = any(t.lower() in title.lower() for t in toks)
         stage = "标题"
         if not hit:

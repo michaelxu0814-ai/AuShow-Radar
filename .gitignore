@@ -1,2 +1,4 @@
 logs/
 data/raw/
+__pycache__/
+*.pyc

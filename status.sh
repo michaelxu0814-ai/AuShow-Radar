@@ -14,7 +14,8 @@ import json
 db = json.load(open('data/events.json'))
 ev = db['events']
 v = sum(1 for e in ev if e.get('verified'))
-print(f'  {len(ev)} 条演出 | 已核实 {v} | 待核实 {len(ev)-v} | 数据日期 {db[\"updated\"]}')"
+shows = sum(1 for e in ev if (e.get('scope') or 'shows') == 'shows')
+print(f'  {len(ev)} 条 | 演出 {shows} / 本地活动 {len(ev)-shows} | 已核实 {v} | 待核实 {len(ev)-v} | 数据日期 {db[\"updated\"]}')"
 
 echo "\n【自动任务】(每天09:00)"
 launchctl print gui/$(id -u)/com.aushow.daily 2>/dev/null | grep -E "runs =|last exit" | sed 's/^/  /'

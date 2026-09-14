@@ -5,7 +5,8 @@
 """
 import html
 import json
-from datetime import date
+import re
+from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -19,7 +20,11 @@ STATUS = {
     "on_sale": ("在售", "s-onsale"),
     "announced": ("已官宣", "s-announced"),
     "tbc": ("待核实", "s-tbc"),
+    "free": ("免费", "s-free"),
 }
+SCOPE_LABEL = {"shows": "演出", "local": "本地玩乐"}
+# 常驻活动的"周末场":没有具体日期但每周六/周日固定开的,也算进本周末
+WEEKEND_RECUR = re.compile(r"周六|周日|周末|礼拜六|礼拜天|星期六|星期日|sat|sun|weekend", re.I)
 MONTH_NAMES = ["一月", "二月", "三月", "四月", "五月", "六月",
                "七月", "八月", "九月", "十月", "十一月", "十二月"]
 
@@ -32,6 +37,7 @@ def card(e):
     st_label, st_cls = STATUS.get(e.get("status"), STATUS["tbc"])
     cat = e.get("category") or "其他"
     city = e.get("city") or "其他"
+    scope = e.get("scope") or "shows"
 
     if e.get("date"):
         d = date.fromisoformat(e["date"])
@@ -52,6 +58,9 @@ def card(e):
         meta.append(f'<span class="m">🎫 {esc(e["price"])}</span>')
     if e.get("ticket_platform"):
         meta.append(f'<span class="m">🏛 {esc(e["ticket_platform"])}</span>')
+    # 本地活动的适龄/主办方等补充信息(演出线不展示 notes,避免噪音)
+    if scope == "local" and e.get("notes"):
+        meta.append(f'<span class="m">ℹ️ {esc(e["notes"][:60])}</span>')
 
     main_url = e.get("ticket_url") or e.get("source_url")
     links = []
@@ -70,7 +79,7 @@ def card(e):
     if main_url:
         title = f'<a href="{esc(main_url)}" target="_blank" rel="noopener">{title}</a>'
 
-    return f'''<article class="card" data-city="{esc(city)}" data-cat="{esc(cat)}">
+    return f'''<article class="card" data-city="{esc(city)}" data-cat="{esc(cat)}" data-scope="{esc(scope)}">
   <div class="art"><span class="ph">{glyph}</span>{img}</div>
   <div class="body">
   <div class="stub"><span class="when">{when}</span><span class="badge {st_cls}">{st_label}</span></div>
@@ -80,6 +89,14 @@ def card(e):
   <div class="foot">{''.join(links)}{unverified}</div>
   </div>
 </article>'''
+
+
+def weekend_window(today: date) -> tuple[date, date]:
+    """本周末 = 最近的周六与周日;今天若已是周六/周日,则只算周末剩下的部分"""
+    if today.weekday() == 6:          # 周日: 周末只剩今天
+        return today, today
+    sat = today + timedelta(days=(5 - today.weekday()) % 7)
+    return sat, sat + timedelta(days=1)
 
 
 def main():
@@ -92,9 +109,24 @@ def main():
                    key=lambda e: e["date"])
     undated = [e for e in events if not e.get("date")]
 
+    # 本周末置顶: 周六/周日有日期的场次 + 每周六/周日的常驻场
+    sat, sun = weekend_window(date.today())
+    def is_weekend(e):
+        if e.get("date"):
+            return sat.isoformat() <= e["date"] <= sun.isoformat()
+        return bool(WEEKEND_RECUR.search(e.get("recurrence") or ""))
+    weekend = [e for e in dated if is_weekend(e)] + [e for e in undated if is_weekend(e)]
+    wk_ids = {id(e) for e in weekend}
+
     sections = []
+    if weekend:
+        span = (f"{sat.month}月{sat.day}日" if sat == sun
+                else f"{sat.month}月{sat.day}–{sun.day}日")
+        sections.append(f'<section><h2><em>本周末</em>{span}</h2><div class="grid">')
+        sections.extend(card(e) for e in weekend)
+        sections.append("</div></section>")
     cur = None
-    for e in dated:
+    for e in (e for e in dated if id(e) not in wk_ids):
         d = date.fromisoformat(e["date"])
         key = (d.year, d.month)
         if key != cur:
@@ -105,15 +137,26 @@ def main():
         sections.append(card(e))
     if cur is not None:
         sections.append("</div></section>")
-    if undated:
+    rest_undated = [e for e in undated if id(e) not in wk_ids]
+    if rest_undated:
         sections.append('<section><h2><em>常驻</em>&amp;待定</h2><div class="grid">')
-        sections.extend(card(e) for e in undated)
+        sections.extend(card(e) for e in rest_undated)
         sections.append("</div></section>")
 
     cities = ["全部"] + sorted({e.get("city") or "其他" for e in events})
     cats = ["全部"] + sorted({e.get("category") or "其他" for e in events})
     chips_city = "".join(f'<button class="chip{" on" if c == "全部" else ""}" data-f="city" data-v="{esc(c)}">{esc(c)}</button>' for c in cities)
     chips_cat = "".join(f'<button class="chip{" on" if c == "全部" else ""}" data-f="cat" data-v="{esc(c)}">{esc(c)}</button>' for c in cats)
+
+    present = {e.get("scope") or "shows" for e in events}
+    scopes = [v for v in SCOPE_LABEL if v in present] + sorted(present - set(SCOPE_LABEL))
+    if len(scopes) > 1:
+        chips_scope = "".join(
+            f'<button class="chip{" on" if v == "全部" else ""}" data-f="scope" data-v="{esc(v)}">'
+            f'{esc(SCOPE_LABEL.get(v, v))}</button>' for v in ["全部"] + scopes)
+        row_scope = f'<div class="frow"><span class="flabel">内容</span>{chips_scope}</div>'
+    else:
+        row_scope = ""
 
     if CUSDIS_APP_ID:
         comments = (f'<div id="cusdis_thread" data-host="https://cusdis.com" '
@@ -125,7 +168,8 @@ def main():
                     'font-size:13px;color:var(--tan)">💬 留言板筹备中 —— 有演出情报或购票踩坑经历,'
                     '先通过页脚小红书账号私信投稿。</div>')
 
-    page = TEMPLATE.replace("__CHIPS_CITY__", chips_city) \
+    page = TEMPLATE.replace("__ROW_SCOPE__", row_scope) \
+                   .replace("__CHIPS_CITY__", chips_city) \
                    .replace("__CHIPS_CAT__", chips_cat) \
                    .replace("__SECTIONS__", "\n".join(sections)) \
                    .replace("__COMMENTS__", comments) \
@@ -141,8 +185,8 @@ TEMPLATE = r'''<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>澳华演出雷达 · 澳洲华语演出日历 | AuShow Radar</title>
-<meta name="description" content="悉尼、墨尔本华语演出全览:演唱会、脱口秀、开放麦、音乐会、见面会。只列官方购票渠道,拒绝黄牛。">
+<title>澳华演出雷达 · 澳洲华语演出与本地活动日历 | AuShow Radar</title>
+<meta name="description" content="悉尼、墨尔本华语演出全览,布里斯班周末吃喝玩乐与亲子活动:演唱会、脱口秀、市集、美食、展览、遛娃。只列官方渠道,拒绝黄牛。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
@@ -208,6 +252,7 @@ h2::after{content:"";flex:1;border-bottom:2px solid var(--ink);margin-left:6px}
 .s-onsale{background:var(--red);color:#fff}
 .s-announced{border:1.5px solid var(--ink);color:var(--ink)}
 .s-tbc{border:1.5px dashed var(--tan);color:var(--tan)}
+.s-free{background:var(--ink);color:var(--paper)}
 .card h3{font-family:"Noto Serif SC",serif;font-weight:900;font-size:19px;line-height:1.35}
 .en{color:var(--tan);font-size:12px;margin-top:3px;letter-spacing:.02em}
 .meta{display:flex;flex-direction:column;gap:4px;margin:10px 0 12px;font-size:13.5px;color:#4a4238}
@@ -233,11 +278,12 @@ footer a{color:var(--red-dk)}
 <header>
   <span class="kicker">AUSHOW RADAR</span>
   <h1>澳华<span class="accent">演出</span>雷达</h1>
-  <p class="tagline">悉尼 · 墨尔本华语演出全览 —— 演唱会 / 脱口秀 / 音乐会 / 见面会。<b>只列官方渠道,拒绝黄牛。</b></p>
+  <p class="tagline">悉尼 · 墨尔本华语演出 + 布里斯班周末吃喝玩乐 · 亲子遛娃 —— 演唱会 / 脱口秀 / 市集 / 美食 / 展览。<b>只列官方渠道,拒绝黄牛。</b></p>
   <span class="stamp">已收录 __COUNT__ 场</span>
 </header>
 
 <div class="filters">
+  __ROW_SCOPE__
   <div class="frow"><span class="flabel">城市</span>__CHIPS_CITY__</div>
   <div class="frow"><span class="flabel">类型</span>__CHIPS_CAT__</div>
 </div>
@@ -262,12 +308,12 @@ __SECTIONS__
 </div>
 
 <script>
-const state={city:"全部",cat:"全部"};
+const state={city:"全部",cat:"全部",scope:"全部"};
 document.querySelectorAll(".chip").forEach(ch=>ch.addEventListener("click",()=>{
   const f=ch.dataset.f;state[f]=ch.dataset.v;
   document.querySelectorAll(`.chip[data-f="${f}"]`).forEach(c=>c.classList.toggle("on",c===ch));
   document.querySelectorAll(".card").forEach(card=>{
-    const ok=(state.city==="全部"||card.dataset.city===state.city)&&(state.cat==="全部"||card.dataset.cat===state.cat);
+    const ok=Object.entries(state).every(([k,v])=>v==="全部"||card.dataset[k]===v);
     card.classList.toggle("hidden",!ok);
   });
   document.querySelectorAll("section").forEach(s=>{
