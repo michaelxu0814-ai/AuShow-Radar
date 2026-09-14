@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14",
+  "updated": "2026-09-15",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -2257,6 +2257,27 @@
       "link_ok": true,
       "link_note": null,
       "image": "https://www.eventbrite.com/e/_next/image?url=https%3A%2F%2Fimg.evbuc.com%2Fhttps%253A%252F%252Fcdn.evbuc.com%252Fimages%252F1190728140%252F2861357926571%252F1%252Foriginal.20260810-180636%3Fcrop%3Dfocalpoint%26fit%3Dcrop%26w%3D940%26auto%3Dformat%252Ccompress%26q%3D75%26sharp%3D10%26fp-x%3D0.83%26fp-y%3D0.511%26s%3D2c90c788c1791a22d56ff88c54f7f880&amp;w=940&amp;q=75"
+    },
+    {
+      "title_zh": "候场喜剧x洽洽瓜子官方合作-9.20周日【嗑瓜子小赛】",
+      "title_en": null,
+      "artist": null,
+      "category": "其他",
+      "city": "墨尔本",
+      "venue": "Library at The Dock, Docklands",
+      "date": "2026-09-20",
+      "time": "2 PM - 4 PM",
+      "recurrence": null,
+      "price": null,
+      "ticket_platform": "Eventbrite",
+      "ticket_url": "https://www.eventbrite.com.au/e/x-920-tickets-1999093783320",
+      "status": "on_sale",
+      "source_url": "https://www.eventbrite.com.au/e/x-920-tickets-1999093783320",
+      "verified": false,
+      "added": "2026-09-15",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://www.eventbrite.com.au/e/_next/image?url=https%3A%2F%2Fimg.evbuc.com%2Fhttps%253A%252F%252Fcdn.evbuc.com%252Fimages%252F1192118709%252F1908843963573%252F1%252Foriginal.20260828-140257%3Fcrop%3Dfocalpoint%26fit%3Dcrop%26w%3D940%26auto%3Dformat%252Ccompress%26q%3D75%26sharp%3D10%26fp-x%3D0.5%26fp-y%3D0.5%26s%3D92dfa5d8cf62251a2168f1804e10b385&amp;w=940&amp;q=75"
     }
   ]
 }

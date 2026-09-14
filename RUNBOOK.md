@@ -727,3 +727,31 @@
   （时钟从 08-16 起算，2026-11-08 到期；PORTFOLIO.md 最后评审 2026-09-06，距今 7 天，
   在 14 天节律内，本次不触发评审提醒）。内容侧已积压 **001–024 共 24 篇待发，瓶颈仍全在
   人工发布这一步**。
+
+## 2026-09-14（周一）值班日志 — xhs-daily
+
+- **第 025 篇**，选题类型 **单场演出安利**（周一轮换位）。产出
+  `content/025-xhs-copy.md` + `content/cards/025/index.html`（4 张卡，复制自 001，
+  已 `diff` 确认第 1–840 行 head+CSS 仅 `<title>` 一行不同、尾部 script 逐字一致）。
+- **fact-audit：RED=0，CHECKED=16，SOURCES-CITED=16。** 最终文案未发现事实问题。
+  **但选题阶段发现一条 RED 并换了条目**：按"最久没安利"本应重讲 Loadingzone（010），
+  今日核实 Eventbrite 主办方页只剩 2 场待售活动、无一场是开放麦或在 Club Voltaire，
+  最近可查到的 Club Voltaire 开放麦是 2026-03-21——JSON `status=on_sale` 对"开放麦"
+  今天证实不了，不能写"常驻开放麦售票中"。已改取周杰伦墨尔本站（015 之后的下一条），
+  Loadingzone 问题写入 EXCEPTIONS OPEN。
+- **角度**：「上次 vs 这次」——2024-03-16/17 Rod Laver Arena 两晚 → 2026-10-17
+  Marvel Stadium 一晚，容量从约 1.42 万到 5.3 万余座（维基百科）。7 条演出字段全部于今日
+  对 Marvel Stadium 官方公告页与 Ticketmaster 巡演页独立复核（"17 October 2026 (Saturday)"
+  / "7:30 PM" / "On Sale Now!" / "maximum of 6 tickets per person"），与 events.json 一致。
+- **主动剔除**：2024 两场票价（仅搜索摘要）、"不会加场"（预测）、Marvel 演唱会模式容量
+  （词条无该数字，改用座位数）、"Low Availability" 瞬时标签。详见 025 文末。
+- 按提示词第 0 步，本次会话**未调用任何截图/浏览器工具**，渲染交由 `run_daily_xhs.sh` →
+  `automation/render_card.py` 完成。
+- ⚠️ **遗留问题**：AKMU 墨尔本站 09-18 剩 4 天、悉尼站 09-20 剩 6 天，`events.json`
+  相关字段自 08-24 挂出 21 天未修，过期后 verified 池永久掉到 6 条；**新增**：Loadingzone
+  条目的"常驻开放麦/on_sale"今日无法证实（见上）；`content/cards/012/` 仍缺失；
+  Loadingzone `notes`/`time` 字段待修。明天（09-15 周二）为转票防骗指南位，不依赖池子。
+- 组合层提醒：AuShow 杀死标准为 **12 周净新增 500 小红书粉丝 + 每周至少实际发布 3 篇**
+  （时钟从 08-16 起算，2026-11-08 到期；PORTFOLIO.md 最后评审 2026-09-06，距今 8 天，
+  在 14 天节律内，本次不触发评审提醒）。内容侧已积压 **001–025 共 25 篇待发，瓶颈仍全在
+  人工发布这一步**。
