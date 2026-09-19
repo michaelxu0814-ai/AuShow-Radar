@@ -882,3 +882,38 @@
   （时钟从 08-16 起算，2026-11-08 到期；PORTFOLIO.md 最后评审 2026-09-06，距今 12 天，
   仍在 14 天节律内，本次不触发评审提醒）。内容侧已积压 **001–029 共 29 篇待发，瓶颈仍全在
   人工发布这一步**。
+
+## 2026-09-19（周六）值班日志 — xhs-daily
+
+- **第 030 篇**，选题类型 **场馆攻略**（周六轮换位）。产出 `content/030-xhs-copy.md` +
+  `content/cards/030/index.html`（4 张卡，复制自 027，仅 `<title>` + 4 个 poster 区块文案改动，
+  head+CSS+WebGL 脚本逐字保留）。
+- **fact-audit：RED=0，CHECKED=17，SOURCES-CITED=17。** 选题与成稿全程未触发 RED。
+- **场馆选择（本次重开一个旧决定）**：023 日志曾预警"最后一座未写过场馆已用完"、027 已开始
+  回头重讲。但严格核对 verified 池：8 条演出、8 座场馆，实际只写过 6 座——**Palais Theatre**
+  与 **Sydney Event Centre (The Star)** 从未写过，此前 004/023/027 以"袁娅维两场演出日已过"
+  为由跳过、转而重讲。提示词对场馆攻略只要求场馆"出现在 verified=true 演出里"，未要求该演出
+  是未来场次；场馆的交通/入场/座位是 evergreen 内容。故本次取 **Palais Theatre（St Kilda）**
+  作全新场馆，写进系列第一个"老剧院/文化遗产建筑"品类，避开第三次重讲大球场。
+- **红线处理**：本篇不锚定任何具体华语演出——该馆唯一 verified 演出（袁娅维墨尔本 08-20）已
+  过期，同馆其余条目（宋冬野/CNBLUE/二狗等）均 `verified=false`，按"未核实的不发"一律不点名。
+  全篇只写场馆本身的客观信息。
+- **信源**：palaistheatre.com.au/getting-here（地址/电车 16·96·3a/火车 Balaclava/巴士 246·600 等/
+  周边停车位/落客点/出租车排队点/周末拥挤/全有偿停车）、palaistheatre.com.au/accessibility
+  （Lower Esplanade 正门无台阶/两层 Stalls·Lounge/电梯到 foyer/无障碍座位 AA·WW·D 排/Kulture
+  City 感官友好）、维基百科 + 维州文化遗产名录（1927 建成、列入文化遗产名录）。
+- **主动剔除**："没有自带停车场"硬断言（官网无此原句，只写"官方列的全是周边车位"）、具体门牌号
+  （官方只给路口，第三方 12/14 歧义）、"澳洲最大有座剧院/2896 座"（维基带 citation-needed 标签）、
+  "Art Deco"（维基正文写 Spanish Baroque/neoclassical，与第三方口径冲突）、"Lower Esplanade 路段
+  永久封闭"（仅第三方摘要，官方无此句）、具体座位视野/容量精确数/停车价格/班次时刻（官网未给）。
+- 按提示词第 0 步，本次会话**未调用任何截图/浏览器工具**，渲染交由 `run_daily_xhs.sh` →
+  `automation/render_card.py` 完成。
+- **遗留问题（上游未解除项，本次未新增）**：AKMU 墨尔本站 09-18 已过（墨站 ticket_platform 失真
+  问题已无实际影响，条目仍挂 EXCEPTIONS OPEN）；AKMU 悉尼站 09-20 明天剩 1 天，`events.json` 相关
+  字段（venue 旧名/price/time null）自 08-24 挂出仍未修；Loadingzone
+  条目"常驻开放麦/on_sale"仍无法证实（09-14 挂出）；`content/cards/012/` 仍缺失；Loadingzone
+  `notes`/`time` 字段待修。**明天（09-20 周日）为转票防骗指南位**，不依赖 verified 池。
+- 组合层提醒：AuShow 杀死标准为 **12 周净新增 500 小红书粉丝 + 每周至少实际发布 3 篇**
+  （时钟从 08-16 起算，2026-11-08 到期；PORTFOLIO.md 最后评审 2026-09-06，距今 13 天，
+  仍在 14 天节律内，本次不触发评审提醒）。内容侧已积压 **001–030 共 30 篇待发，瓶颈仍全在
+  人工发布这一步**。
