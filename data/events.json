@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -2320,6 +2320,48 @@
       "link_ok": true,
       "link_note": null,
       "image": "https://www.theround.com.au/sites/theround/files/styles/metatag_image_default/public/2026-08/web_banner_-_939px_x_512px_wangzhanhengfu_939_512.png?itok=nyPUwiAP"
+    },
+    {
+      "title_zh": "候场喜剧\"抓马大会\"之【前任遗物拍卖会】第四期",
+      "title_en": null,
+      "artist": null,
+      "category": "脱口秀",
+      "city": "墨尔本",
+      "venue": "9 Prospect St Box Hill, VIC 3128",
+      "date": "2026-09-26",
+      "time": "2:30 PM - 4:30 PM",
+      "recurrence": null,
+      "price": null,
+      "ticket_platform": "Eventbrite",
+      "ticket_url": "https://www.eventbrite.com.au/e/2000260512037",
+      "status": "on_sale",
+      "source_url": "https://www.eventbrite.com.au/e/2000260512037",
+      "verified": false,
+      "added": "2026-09-21",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://www.eventbrite.com.au/e/_next/image?url=https%3A%2F%2Fimg.evbuc.com%2Fhttps%253A%252F%252Fcdn.evbuc.com%252Fimages%252F1193057880%252F1908843963573%252F1%252Foriginal.20260909-141106%3Fcrop%3Dfocalpoint%26fit%3Dcrop%26w%3D940%26auto%3Dformat%252Ccompress%26q%3D75%26sharp%3D10%26fp-x%3D0.5%26fp-y%3D0.5%26s%3D094ad20bde8db7b7fb5814d044891e7b&amp;w=940&amp;q=75"
+    },
+    {
+      "title_zh": "2026 中秋音乐会",
+      "title_en": "2026 Chinese Moon Festival Concert",
+      "artist": null,
+      "category": "音乐会",
+      "city": "墨尔本",
+      "venue": "The Round, 379 Whitehorse Rd, Nunawading",
+      "date": "2026-09-25",
+      "time": "14:00",
+      "recurrence": null,
+      "price": "免费（需预约）",
+      "ticket_platform": "The Round",
+      "ticket_url": "https://www.theround.com.au/2026ChineseMoonFestival",
+      "status": "on_sale",
+      "source_url": "https://www.theround.com.au/2026ChineseMoonFestival",
+      "verified": false,
+      "added": "2026-09-21",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://www.theround.com.au/sites/theround/files/styles/metatag_image_default/public/2026-08/chinese_performing_arts_development.jpg?itok=_FTHuoNN"
     }
   ]
 }
