@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30",
+  "updated": "2026-10-01",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -2509,6 +2509,27 @@
       "link_ok": true,
       "link_note": null,
       "image": null
+    },
+    {
+      "title_zh": "候场喜剧墨尔本Box Hill开放麦",
+      "title_en": null,
+      "artist": null,
+      "category": "开放麦",
+      "city": "墨尔本",
+      "venue": "Eno Cafe, 895A Canterbury Rd, Box Hill VIC 3128",
+      "date": null,
+      "time": null,
+      "recurrence": null,
+      "price": null,
+      "ticket_platform": "Humanitix",
+      "ticket_url": "https://events.humanitix.com/box-hill",
+      "status": "tbc",
+      "source_url": "https://events.humanitix.com/box-hill",
+      "verified": false,
+      "added": "2026-10-01",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://images.humanitix.com/i/22530fc3-6830-44be-bca1-b33c178ff097.png@seo-500.jpg"
     }
   ]
 }
