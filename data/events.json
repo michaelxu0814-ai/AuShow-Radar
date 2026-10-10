@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -2761,6 +2761,27 @@
       "link_ok": true,
       "link_note": null,
       "image": "https://www.dealmoon.com.au/assets/image/sites/AU/app_icon_200.png"
+    },
+    {
+      "title_zh": "Rolling Donkey 驴打滚每周二中文喜剧开放麦",
+      "title_en": null,
+      "artist": null,
+      "category": "开放麦",
+      "city": "悉尼",
+      "venue": "87-91 Abercrombie St",
+      "date": "2026-10-13",
+      "time": "19:30",
+      "recurrence": "每周二",
+      "price": null,
+      "ticket_platform": "Palaner",
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://palaner.com/events/eventbrite-96f4343198",
+      "verified": false,
+      "added": "2026-10-11",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://palaner.com/events/eventbrite-96f4343198/opengraph-image?1ffdb126fba4ed10"
     }
   ]
 }
