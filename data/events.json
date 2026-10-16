@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16",
+  "updated": "2026-10-17",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -3222,6 +3222,27 @@
       "added": "2026-10-16",
       "link_ok": false,
       "link_note": "页面不含艺人/演出名: 小红书 - 你的生活兴趣社区",
+      "image": null
+    },
+    {
+      "title_zh": null,
+      "title_en": "2026 Georges River Chongyang Festival",
+      "artist": null,
+      "category": "其他",
+      "city": "悉尼",
+      "venue": "Hurstville Plaza",
+      "date": "2026-10-18",
+      "time": "12:00 PM",
+      "recurrence": null,
+      "price": null,
+      "ticket_platform": "Eventbrite",
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://www.eventbrite.com.au/o/acy-live-121741765479",
+      "verified": false,
+      "added": "2026-10-17",
+      "link_ok": true,
+      "link_note": null,
       "image": null
     }
   ]
