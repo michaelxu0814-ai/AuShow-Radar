@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17",
+  "updated": "2026-10-18",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -3244,6 +3244,27 @@
       "link_ok": true,
       "link_note": null,
       "image": null
+    },
+    {
+      "title_zh": "上海交响乐团",
+      "title_en": "Shanghai Symphony Orchestra",
+      "artist": "上海交响乐团 / 余隆（指挥）/ 王雅伦（钢琴）",
+      "category": "音乐会",
+      "city": "墨尔本",
+      "venue": "Hamer Hall（汉默音乐厅）",
+      "date": null,
+      "time": null,
+      "recurrence": null,
+      "price": null,
+      "ticket_platform": "Melbourne Symphony Orchestra",
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://www.mso.com.au/performance/2026-shanghai-symphony-orchestra",
+      "verified": false,
+      "added": "2026-10-18",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://melbourne-symphony-orchestra.s3.amazonaws.com/production/Concert-pages/2026-concerts/_1200x630_crop_center-center_82_none/2026-shanghai-symphony-orchestra-1200x800.jpg?mtime=1760582571"
     }
   ]
 }

@@ -956,3 +956,25 @@
 **管道健康**：`automation/logs/2026-10-14.log` 显示昨日（10-14 周三，场馆攻略位）**整篇缺失，根因是 session limit**（"You've hit your session limit · resets 12:30pm"）；10-12（周一，单场安利位）同样因 session limit 失败。即**本周 10-12 至今只有 10-13 与今日 10-15 两篇产出**，宪法里 AuShow 的硬前提是"每周实际发布 ≥3 篇"，本周若无补篇将不达标（而这属于**执行失败**，按宪法不得据此判市场证伪）。另：09-03 就提过的"`FAILED:` 分支也要推一条 Telegram"至今未改，所以这两次失败依旧只能靠翻日志才发现。
 
 ⚠️ **治理提醒**：`PORTFOLIO.md` 最后评审 2026-09-06，今日 10-15 已 **39 天**，远超宪法 14 天节律，建议尽快跑 `/portfolio-review`。AuShow 杀死标准时钟 **2026-11-08**（尚未触发，剩 24 天）。
+
+### 值班日志 2026-10-17（第 055 篇 · 场馆攻略）
+
+今日按周六轮换位产出 **055 场馆攻略**，`content/055-xhs-copy.md` + `content/cards/055/index.html`（5 张卡：封面 / 到场之前 ledger×4 / 怎么进场 ledger×4 / 场内这些事 ledger×4＋body 长段落 / CTA），无配图。渲染与 Telegram 推送按提示词第 0 节交给 `run_daily_xhs.sh` → `render_card.py`，本次会话**未调用任何浏览器/截图工具**。
+
+**fact-audit：RED=0 CHECKED=39 SOURCES-CITED=39**，39 条全 GREEN，无遗留 RED。信源为 marvelstadium.com.au 官网 **9 个页面**当日 curl 原文逐条抽取（`accessibility-inclusion` 下的 5 个无障碍子页 ＋ `a-z-guide-to-marvel-stadium` ＋ `conditions-of-entry` ＋ `local-community-information-special-events`），其中多数硬事实有 2–4 页互证。
+
+**选题与角度**：按"最久没被写过"取 **Marvel Stadium**（027，09-16，31 天前，8 座 verified 场馆里最久），这是 Marvel 第三讲、本栏目第七次"回头换角度重讲"。角度是**本号 55 篇里第一次以无障碍为整篇主线**——004 写"怎么到/怎么进"、027 写"散场之后这一小时"，两篇读者都是能走能跑的观众；本篇把读者换成推轮椅、扶长辈、带怕吵的人那一个，主线是"**一半的事必须在到场之前安排好**"（无障碍票经 Ticketmaster 互动座位图买 / Companion Card 陪同人免费但须买票时当 add-on 勾 / 演出日前先联系场馆无障碍团队 / 停车反着订）。Marvel 的 004/027 对无障碍一字未碰。
+
+⚠️ **今日最值得记一笔的判断：本篇刻意不锚定任何演出场次**。Marvel 唯一的 verified 演出就是周杰伦墨尔本站，而**该场的演出日正是今天（10-17，19:30）**。本内容需经用户手机审核后手动发布，发布时点很可能已在开演之后——若沿 004/027 的写法把"10 月 17 日周杰伦墨尔本站就在这里"写进封面与正文，这篇会**发布即过期**。故沿用 030（Palais）先例，只写场馆自身 evergreen 的无障碍信息，正文与卡片**零引用任何演出字段（含日期）**，唯一与 `events.json` 的接点是"Marvel Stadium 是某 `verified=true` 条目的场馆"这一事实本身。这个处理同时让该篇在今晚之后仍然可发。
+
+**fact-audit 挡下来的 2 个 🔴 冲突项**：① **"中途扫码出场、再回原门重扫进来"的再入场机制**——A-Z 指南把它写成一套常规可用流程，而 Conditions of Entry 写 "Pass outs will not be issued… **except in exceptional circumstances at the sole discretion of MSL**"，两页对"普通观众中途出去还能不能回来"口径冲突，按红线"不自行添加入场规则"整块剔除，只保留两页一致的"不发 pass out"并把读者引向场内 Chill Hub / Sensory Room。（004 当时也剔除过这一项，**今日复核冲突依然存在**，不是旧笔误。）② **Gate 5 Guest Services 的 Aisle 号**——`event-day-assistance-and-ticketing` 同一页内先写 Aisle 37、后写 Aisle 36，自相矛盾（另三页均作 36）；虽然 36 占多数且 004 当时写的也是 36，但既然官方页自相矛盾，本篇索性**不写任何 Guest Services 的 Aisle 号**，只写 Gate 1 / Gate 5（Changing Places 的 Level 1 – Aisle 3 例外：两页一致，且是定位该设施的唯一信息）。
+
+**红线执行**：官方 Special Events 页今日列出了 Marvel 本季其余大量场次（Robbie Williams 11-11、Foo Fighters 11-14、Harry Styles、Guns 'n' Roses、RMIT 毕业礼、Faith No More・System Of A Down、BTS 2027-02、Bruno Mars 2027-02、2027 橄榄球世界杯）。这些在 `data/events.json` 中**均非 `verified=true`**，按"未核实的不发"**一个都没点名**，也没写"本季还有很多场"这类暗示。顺带一提：这份官方名单说明 Marvel 后续演唱会密度很高，是**人工补 verified 条目性价比最高的一个入口**（见下方例外队列新增条）。
+
+🔴 **发现并回填了一处管道缺口**：**054（10-16，单场演出安利）的 `posted-log.md` 与 `RUNBOOK.md` 两处追踪记录整步缺失**。054 的文案与卡片已于 10-16 正常产出并随 commit `c524d0c` 入库（含 4 张已渲染 PNG），但该次运行**没有执行提示词第 6 步**（疑似会话中断）。本次写 055 时按"最久没被安利"查表才发现缺口——这个缺口会直接污染后续选题判断（054 用掉了 Rolling Donkey，若不回填，下一轮"单场演出安利"会误以为它仍是最久未安利的那条而重复选中）。已据 `content/054-xhs-copy.md` 原文**回填 posted-log 的 054 行并标注"2026-10-17 回填"**，未改动 054 的任何内容文件。建议在 `run_daily_xhs.sh` 里把"第 6 步追踪文档是否更新"做成硬检查（与 FACT-AUDIT-STATUS 同级），否则这类静默缺口只能靠下一次人/AI 碰巧发现。
+
+**选题可持续性**：8 座 verified 场馆**现已全部写过至少两轮**（Marvel 已三讲）。各馆最近一次：Marvel 055(10-17)、Club Voltaire 050(10-10)、Chippo 047(10-07)、Margaret Court 043(10-03)、TikTok Ent Centre 040(09-30)、ENGIE 037(09-26)、Sydney Event Centre 034(09-23)、Palais 030(09-19)。场馆攻略在轮换表里占周三与周六两格，**下一次是 10-21（周三）**，应取 **Palais Theatre（030，一讲）或 Sydney Event Centre（034，一讲）**——这两座仍只写过一轮，二讲空间比 Marvel 第四讲大。但本栏目与"本周开票汇总"面临同一个根因：**`verified=true` 只有 8 条、场馆只有 8 座**，角度储备终会见底。
+
+**上游遗留未解除项（本次未新增字段类问题）**：AKMU 两场 `events.json` 字段自 08-24 挂 EXCEPTIONS OPEN 未修（演出日 09-18/09-20 均已过，已永久作废）；Loadingzone 自 09-14 挂 OPEN 已一个月未修；袁娅维两场演出日已过。**verified 池实质可用量：今晚周杰伦墨尔本站开演后只剩 2 条**（周杰伦悉尼站 11-21、Rolling Donkey 每周二）。
+
+⚠️ **治理提醒**：`PORTFOLIO.md` 最后评审 **2026-09-06，今日 10-17 已 41 天**，远超宪法 14 天节律，建议尽快跑 `/portfolio-review`（本次已在会话结尾向用户提示，按宪法只提醒不阻塞）。AuShow 杀死标准时钟 **2026-11-08 到期，剩 22 天**；硬前提是"每周至少实际发布 3 篇"——本周（10-12 起）已产出 053(10-15)、054(10-16)、055(10-17) **3 篇**，但 10-12 与 10-14 两篇因 session limit 丢失（已在 EXCEPTIONS OPEN）。注意该前提算的是**实际发布**数，而本管道只产出待审内容，最终是否达标取决于用户手机端的实际发布动作。
