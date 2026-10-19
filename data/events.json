@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -3265,6 +3265,48 @@
       "link_ok": true,
       "link_note": null,
       "image": "https://melbourne-symphony-orchestra.s3.amazonaws.com/production/Concert-pages/2026-concerts/_1200x630_crop_center-center_82_none/2026-shanghai-symphony-orchestra-1200x800.jpg?mtime=1760582571"
+    },
+    {
+      "title_zh": null,
+      "title_en": "China National Opera - East Meets West Opera Spectacular",
+      "artist": "中央歌剧院 China National Opera House",
+      "category": "音乐会",
+      "city": "墨尔本",
+      "venue": "Melbourne Recital Centre",
+      "date": "2027-07-18",
+      "time": null,
+      "recurrence": null,
+      "price": null,
+      "ticket_platform": null,
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://www.oaaca.org.au/upcoming-events",
+      "verified": false,
+      "added": "2026-10-20",
+      "link_ok": true,
+      "link_note": null,
+      "image": null
+    },
+    {
+      "title_zh": "神韵 悉尼站",
+      "title_en": "Shen Yun - Sydney",
+      "artist": "Shen Yun",
+      "category": "其他",
+      "city": "悉尼",
+      "venue": "Capitol Theatre",
+      "date": "2027-03-20",
+      "time": null,
+      "recurrence": null,
+      "price": null,
+      "ticket_platform": null,
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://www.nsw.gov.au/visiting-and-exploring-nsw/nsw-events/shen-yun-sydney",
+      "verified": false,
+      "added": "2026-10-20",
+      "link_ok": true,
+      "link_note": null,
+      "image": "https://www.nsw.gov.au/sites/default/files/styles/_medium/public/atdw/f73e17cfb00b305efbb8717c75b2d166.jpeg?itok=dnP5dwS4"
     }
   ]
 }
