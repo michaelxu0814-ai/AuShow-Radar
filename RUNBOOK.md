@@ -1252,3 +1252,50 @@ Loadingzone 挂 OPEN，**实际可用只剩 2 条**：周杰伦悉尼站（11-21
 - **verified 池状态（本篇未触碰 `events.json`）**：仍 8 条，实际可用仍只有 2 条
   （周杰伦悉尼站 11-21 ＋ Rolling Donkey 每周二），与 10-23→10-25 记录一致。
   人工补 verified 条目仍是本线最高性价比的动作。
+
+## 值班日志 2026-10-29（周四，本周开票汇总位）
+
+- **产出 065「一场还拿不到票，一场已不能退」**（本周开票汇总，本栏目第 11 篇）。
+  文案 `content/065-xhs-copy.md`、卡片 `content/cards/065/index.html`（3 张，基底
+  `cards/053/index.html` —— 059 的 HTML 从未建成）。渲染/推送按既定分工留给
+  `run_daily_xhs.sh` → `render_card.py`，本次会话未调用任何截图工具。
+- **fact-audit：RED=0 CHECKED=35 SOURCES-CITED=35，无需改稿即清零。**
+  唯一一条降级为 AMBER 的是 #27（"11-03 那场的可退窗口已于 10-27 关闭"）—— Eventbrite 只给了
+  "Refunds up to 7 days before event" 一句，未定义截止时点/时区，故按字面推导、文案已加
+  "以 Eventbrite 页面为准"，不作绝对断言。
+- **两条过程中发现并自行修正的问题（记录在案）**：
+  ① 核查表起草时把 `verified=true` 写成 9 条，程序化枚举后确认是 **8 条**（160 条总量，5 条
+  演出日已过，Loadingzone 挂 OPEN，实际可用 2 条），已改正核查表 #31/#32 与 posted-log 同一处；
+  ② 渲染状态段原写"同步复制 `assets/`"，实查 `content/cards/` 下**任何一期都没有 assets 目录**
+  —— `assets/magazine-bg-webgl.js` 自 001 起一直 404、`mag-bg` canvas 留空，053 的 3 张 PNG
+  就是在这个状态下渲染出来的，属已验证既有状态，已改写该段、本期不动。
+- **选题角度（第 11 种切分，不再切 JSON 字段）**：池子只剩 2 条、字段维度上周（059）已切到
+  `date`/`recurrence` 对立面为止，本篇改切**两个官方页面今天各自印着的一句时间规则**：
+  Ticketmaster 官方巡演页 "Tickets will become available in your account 2 weeks prior to the
+  event date."（→ 悉尼站的票 11-07 才进账号，距今 9 天）＋ Eventbrite 售票页 Refund Policy
+  "Refunds up to 7 days before event"（→ 下一场 11-03 往前 7 天 = 10-27，前天）。
+  这两句话经 grep 确认**此前 64 篇一次都没用过**，凑成"票还没到任何人手上／退款窗口已经关上"
+  这组相反状态，并把防诈口径接上（今天有人发"票的截图"，官方时间线本身对不上）。
+- 📌 **留给"场馆攻略"位的素材（本篇按红线主动没写）**：Sydney Showground 官方场次页今日
+  **确实**印着 `6:00pm – Gates open` / `8:30pm - Final Entry` / `10:30pm – Event finishes`，
+  以及入场年龄限制、禁带物品（不许非官方灯牌／自拍杆／大于 A3 的灯牌海报）、Hidden
+  Disabilities Sunflower 安静室、停车须前一晚 23:59 前预订等。来源是**场馆官方一手页**、可核实，
+  但账号红线把"检票时间/入场须知"列为不可自行添加项、且"本周开票汇总"前十篇一律不写，
+  本篇保持同口径。**这批信息更适合放进场馆攻略位并注明"以场馆页为准"**，比再写一遍 ENGIE
+  交通视野更有新意（064 刚写过无障碍，注意错开）。
+  源：https://www.sydneyshowground.com.au/whats-on/jay-chou-carnival--world-tour/
+
+### ⚠️ 治理提醒（按宪法只提醒、不阻塞）
+
+- `PORTFOLIO.md` 最后评审 **2026-09-06，今日 10-29 已 53 天**，远超 14 天节律，
+  建议尽快跑 `/portfolio-review`。
+- AuShow 杀死标准时钟 **2026-11-08 到期，剩 10 天**，尚未触发。硬前提"每周至少**实际发布**
+  3 篇"：本周（10-26 周一起算）**算今天这篇只有 2 篇产出**（064 + 065），其中 10-26 整篇丢失、
+  063 无图不构成"实际发布"。**剩 10-30（单场安利）／10-31（场馆攻略）／11-01（防骗）三个位，
+  至少再跑成 1 个才够 3 篇**；补发 063 可立刻把本周垫到 3 篇。宪法明文"发布数不达标则判为
+  执行失败，不算市场证伪，不得据此续命"。
+- **verified 池状态（本篇未改动 `events.json`，该文件 `updated` 字段今日为 2026-10-29，
+  由 run_daily 管道维护）**：共 **8 条**（非此前日志沿用的"8 条/9 条"口径混用，今日已程序化
+  核定为 8），实际可用仍只有 2 条（周杰伦悉尼站 11-21 ＋ Rolling Donkey 每周二）。
+  **11-21 一演完，本栏目就只剩"每周二"一条底料**——人工补 verified 条目仍是本线最高性价比动作，
+  10-17 日志里记的 Marvel Stadium 官方 Special Events 页仍是最省力的入口。
