@@ -1329,3 +1329,12 @@ Loadingzone 挂 OPEN，**实际可用只剩 2 条**：周杰伦悉尼站（11-21
   Rolling Donkey（每周二）、本条（常驻）。**本条今日已转为 AMBER 待复核**，若复核发现它已停更，
   可用池会掉到 2 条、且"单场演出安利"将只剩 11-21 一个带日期的锚。人工补 verified 条目仍是本线
   最高性价比动作。
+
+- **2026-10-31**：第 067 篇，选题类型「场馆攻略」（周六轮换位）。场馆 TikTok Entertainment
+  Centre（悉尼 Darling Harbour，ICC Sydney 剧院馆），角度「带娃观演」——18 篇场馆攻略里
+  第一次写这个人群，与该馆前两篇 020（改名＋随身物品）、040（怎么去＋找对门）零重叠。
+  fact-audit：19 条断言全部 GREEN，RED=0，信源为 iccsydney.com.au 官方 Event FAQs 与
+  getting-here 页、tiktokentcent.com，当日抓取逐条留 URL；未发现需要改文案的问题。
+  主动排除：改名日期（020 引用的那句官方原文已不在现版 FAQ 页上，不复述今天复核不到的
+  数字）、座位容量（二手来源互相打架）、儿童票价/折扣、婴儿车寄存具体位置（官网明写每场
+  不同）、ATM。卡片 4 张，HTML 基底取 061。渲染与 Telegram 推送交 run_daily_xhs.sh。
