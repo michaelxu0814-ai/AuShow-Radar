@@ -1338,3 +1338,44 @@ Loadingzone 挂 OPEN，**实际可用只剩 2 条**：周杰伦悉尼站（11-21
   主动排除：改名日期（020 引用的那句官方原文已不在现版 FAQ 页上，不复述今天复核不到的
   数字）、座位容量（二手来源互相打架）、儿童票价/折扣、婴儿车寄存具体位置（官网明写每场
   不同）、ATM。卡片 4 张，HTML 基底取 061。渲染与 Telegram 推送交 run_daily_xhs.sh。
+
+- **2026-11-01**：第 068 篇，选题类型「转票防骗指南」（周日轮换位）。角度「演出一改期，退款
+  不退给你」——19 篇防骗里**第一次把时间轴拉到演出之后**：前 18 篇全部停在付钱那一刻前后，
+  本篇问的是「票已经到手、也进得去场，可演出一改期或取消，官方系统里到底有没有你这个人」。
+  主线依据是 Ticketmaster AU 购买政策 **clause 5（Ticket Forward）与 clause 6（Cancelled and
+  Rescheduled Events）**，核心原话 "only the original purchaser of a forwarded ticket will be
+  entitled to any available refund"，以及帮助页那句 "must refund payment to the **account
+  holder** and the payment method used at the time of purchase"。
+  fact-audit：**19 条断言全部 GREEN，RED=0，CHECKED=SOURCES-CITED=19，未发现需要改文案的
+  问题**。4 个信源页（ticketmaster.com.au/h/purchase.html、help.ticketmaster.com.au 文章
+  43006802273169、help.ticketek.com.au 文章 360044955693 与 360044428414）今日经 Firecrawl
+  `maxAge:0` 实时抓取**均 HTTP 200**，引文逐字，**四个页面全部为 18 篇前作零次引用**
+  （051 只用过 purchase.html 的 clause 9 与 16.4，与本篇 clause 5／6 无交集）。
+- **与 031 的接续（这次最值得记的一条）**：031（2026-09-20）的核查表末尾曾**主动把「演出改期／
+  延期的退款规则」整条剔除并挂起**，理由是会与它「取消自动退」的主线混淆。本篇就是回去把那条
+  线补完的，并且**零次触碰 031 的 Scamwatch 钓鱼主线、假退款链接与「3–5 个工作日」**。
+  → 这说明「主动剔除」栏目正在按设计发挥作用：被挂起的线日后能被准确捡回来，不用重新找角度。
+- **两家规则不合并**：Ticketek 的改期页与取消页**没有**「退款只给原购票人」这句话，因此全篇
+  Ticketmaster／Ticketek 分开陈述，Ticketek 侧只写其页面实际写了的（卡购取消自动退、改期须
+  自行申请、邮箱过期票仍对新日期有效）。沿用 062 建立的两平台分写纪律。
+- 主动剔除：Hyperwallet 退款操作流程（属原购票人自己的事，对「退款归谁」无增量）、同页的可疑
+  邮件提示（属 031）、clause 12.4(a) 机票住宿连带损失（相邻但分散主线，**留给未来一篇**）、
+  clause 6.2／clause 8、clause 16.3（属 007／046）、clause 9／16.4（051 已占用）、Ticketek
+  Marketplace 买家保障（属 026／046）、以及「所以永远别接转票」这类一刀切结论。全篇零统计数字。
+- 第 5 步按提示词第 0 节**未调用任何浏览器截图工具**；`content/cards/068/index.html` 已建
+  （4 张卡，基底复制 `cards/062/index.html`，已用 Python 确认其 `<style>` 区块与
+  `cards/001/index.html` **逐字节相同（均 27000 字节，== 为 True）**，`<title>` 已改为 068、
+  无串号；剥掉 HTML 注释后 `poster_count` 正好 4，`<main>` 内无其它兄弟 `<section>`，
+  `render_card.py` 的 `nth-of-type` 逐张截图前提成立）。渲染与 Telegram 推送交
+  `run_daily_xhs.sh`。
+- **P2 是本篇唯一的 4 行 ledger**（前作防骗类多为 3 行）。四行均沿用既有
+  `.ledger-note{max-width:460px}` 约束、未新增内联样式；若渲染出图后发现第 4 行挤压或溢出，
+  处置方式是把第 3 行「钱退到哪」的括注句移到卡片底部 `.body` 一行，而不是改 CSS。
+- **时钟提醒（不阻塞，但已到期）**：AuShow 杀死标准 **2026-11-08 到期，今日 11-01 剩 7 天**。
+  本周（10-26 周一起算）产出 064／065／066／067／**今天 068 = 5 篇**，按产出口径已远超
+  「每周至少 3 篇」硬前提；仍需注意口径差异——若严格按「实际发布」计，要这些都真的发出去。
+- `PORTFOLIO.md` 最后评审 **2026-09-06，今日 11-01 已 56 天**，远超 14 天节律，**建议尽快跑
+  `/portfolio-review`**（本条自 10-30 起连续第三次出现在值班日志，仍未跑）。
+- **verified 池状态（本篇未改动 `events.json`）**：本篇不消耗池子，池子状态与 067 日志一致
+  （8 条、实际可用约 3 条，其中 067 复核中转 AMBER 的那条仍待人工裁决）。人工补 verified
+  条目仍是本线最高性价比动作。
