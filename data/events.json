@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -3391,6 +3391,27 @@
       "link_ok": true,
       "link_note": null,
       "image": null
+    },
+    {
+      "title_zh": "虾皮配酒线下喜剧播客",
+      "title_en": null,
+      "artist": null,
+      "category": "其他",
+      "city": "悉尼",
+      "venue": "Level 14, 465 Victoria Ave, Chatswood",
+      "date": null,
+      "time": "19:00",
+      "recurrence": "每周六",
+      "price": null,
+      "ticket_platform": "Eventbrite",
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://www.eventbrite.com.au/d/australia--berala/%E6%82%89%E5%B0%BC-%E8%84%B1%E5%8F%A3%E7%A7%80/",
+      "verified": false,
+      "added": "2026-11-03",
+      "link_ok": false,
+      "link_note": "页面不含艺人/演出名: Discover 悉尼 脱口秀 Events &amp; Activities in Berala, Australia",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196176165%2F2490370607351%2F1%2Foriginal.20261020-110220?crop=focalpoint&amp;fit=crop&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=64041668204d55d33761154424382851"
     }
   ]
 }
