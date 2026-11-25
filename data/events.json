@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "events": [
     {
       "title_zh": "周杰伦「粉色 墨尔本 嘉年华Ⅱ」世界巡回演唱会",
@@ -3787,6 +3787,27 @@
       "source_url": "https://www.xiaohongshu.com/user/profile/603510d4000000000101f5f8",
       "verified": false,
       "added": "2026-11-24",
+      "link_ok": false,
+      "link_note": "页面不含艺人/演出名: Log in - rednote - share, connect, love",
+      "image": null
+    },
+    {
+      "title_zh": "AUNSW x PianoSoc 音乐会",
+      "title_en": null,
+      "artist": null,
+      "category": "音乐会",
+      "city": "悉尼",
+      "venue": null,
+      "date": null,
+      "time": null,
+      "recurrence": null,
+      "price": null,
+      "ticket_platform": null,
+      "ticket_url": null,
+      "status": "tbc",
+      "source_url": "https://www.xiaohongshu.com/user/profile/67dd3a43000000000d0095f5",
+      "verified": false,
+      "added": "2026-11-26",
       "link_ok": false,
       "link_note": "页面不含艺人/演出名: Log in - rednote - share, connect, love",
       "image": null
